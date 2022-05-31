@@ -1,0 +1,64 @@
+.topbarbanner {
+    width:100%;
+    align-items: center;
+    display: flex; 
+    justify-content: space-between;
+    padding: 8px 16px;
+    /* margin: 10px 5px; */
+    margin-top:10px;
+    border-radius: 4px;
+    background-color: rgb(200, 248, 246);
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    flex: 1 0 auto;
+    margin-right: 16px;
+}
+.text{
+    padding: 10px 5px;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    text-align: justify;
+}
+.bannerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.cta-link{
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: #002f34;
+}
+.cta {
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+}
+
+.right {
+    flex: 0 0 auto;
+    margin-left: 16px;
+}
+.underline {
+    border-bottom: solid 3px;
+    border-color: inherit;
+    height: 1px;
+    margin-top: -1px;
+    padding-top: 4px;
+    transition: transform 0.15s;
+    width: 100%;
+}
+.closeIcon {
+    border: none;
+    width: 16px;
+    height: 16px;
+    background: url(https://static.olx.kz/static/olxkz/packed/font/2f5d86848d7bb5445cf6f8c99da439f6d3.svg) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
