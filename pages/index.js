@@ -1,20 +1,21 @@
-import MyApp from './_app';
+import Maincategories from './components/maincategories/Maincategories';
+import TopBarBaner from "./components/topbarbanner/topbarbaner";
+import SearchMain from "./components/searchmain/searchmain";
 
 const Home = () => {
-  const t = useTranslations('home')
   return (
     <>
-      <MyApp/>
-      <h1> {t('welcome')} </h1>
+      <section>
+        <TopBarBaner />
+      </section>
+      <section>
+        <SearchMain />
+      </section>
+      <section>
+        <Maincategories />
+      </section>
     </>
   )
 }
 export default Home;
 
-export function GetStaticProps({lacale}){
-  return {
-    props : {
-      message: require(`../lang/${locale}.json`),
-    }
-  }
-}

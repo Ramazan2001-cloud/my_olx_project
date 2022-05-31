@@ -1,25 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import {useEffect} from 'react';
+import "bootstrap/dist/css/bootstrap.css";
 import Header from './components/header/header';
-import TopBarBaner from './components/topbarbanner/topbarbaner';
-import {NextIntlProvider} from 'next-intl';
+import { useEffect } from "react";
 
-const MyApp = () => {
-  useEffect(()=>{
+
+const MyApp = ({Component,pageProps}) => {
+  useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
-  },[]);
+  }, []);
   return (
     <>
-      <NextIntlProvider messages={pageProps.messages}>
-
-      </NextIntlProvider>
-      <Header/>
-      <section>
-        <TopBarBaner/>
-      </section>
+      <Header />
+      <Component {...pageProps}/>
     </>
   );
-  
-}
-
+};
 export default MyApp;
+

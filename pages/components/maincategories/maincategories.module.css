@@ -1,0 +1,19 @@
+.container {
+	max-width: 1097px;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.list__reset {
+	list-style: none;
+}
+.link__reset {
+	text-decoration: none;
+}
+.maincategories__container{
+	padding-top: 56px;
+	text-align: center;
+}
+.maincategories__list{
+	display:flex;
+}
