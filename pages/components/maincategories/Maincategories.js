@@ -15,5 +15,3 @@ const Maincategories = () => {
   );
 };
 export default Maincategories;
-
-
