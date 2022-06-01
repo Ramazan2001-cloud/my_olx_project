@@ -1,7 +1,32 @@
 .container {
   padding: 0 2rem;
 }
-
+/* --------------------------- */
+.container {
+  max-width: 1097px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.list__reset {
+  list-style: none;
+}
+.link__reset {
+  text-decoration: none;
+}
+.content {
+  background-color: #f2f4f5;
+}
+.business__container {
+  background-color: #002f34;
+}
+.about__container {
+  background-color: #cbf7ee;
+}
+.footer__container{
+  background-color: #FFFFFF;
+}
+/* ---------------------------- */
 .main {
   min-height: 100vh;
   padding: 4rem 0;

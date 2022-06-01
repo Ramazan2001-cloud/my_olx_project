@@ -4,7 +4,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color:green;
 }
 
 a {
@@ -14,16 +13,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-.container{
-  max-width: 1097px;
-  margin: 0 auto;
-  padding-left:10px;
-  padding-right:10px;
-}
-.list__reset{
-  list-style: none;
-}
-.link__reset{
-  text-decoration: none;
 }

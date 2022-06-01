@@ -1,38 +1,109 @@
-import styles from './vip_content';
-import className from 'classname/bind';
-import VipContentCards from './vip_content__cards/vip_content__cards';
-
-
-let cn = className.bind(styles);
+import styles from "./vip_content.module.css";
+import classNames from "classnames/bind";
+let cn = classNames.bind(styles);
+import VipContentCards from "./vip_content__cards/vip_content__cards";
 
 const VipContent = () => {
-	let listVipCards = 
-	[
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-		{title:'',address:'',price:''},
-	];
+  let listVipCards = [
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+    {
+      title: "Обрезка кустарников и деревьев",
+      address: "Актобе, микрорайон 5",
+      price: "5 000 тг.",
+    },
+  ];
 
-	return (
-		<>
-			<div className={cn('vip_content__container','container')}>
-				
-				<VipContent/>
-			</div>
-		</>
-	)
-}
+  const vipContentCardsList = listVipCards.map((item, i) => {
+    return (
+      <VipContentCards
+				key={i}
+        title={item.title}
+        address={item.address}
+        price={item.price}
+      />
+    );
+  });
+  return (
+    <div className={cn("vip_content__container", "container")}>
+      <h1 className={cn("vip_content__title")}>VIP-объявления</h1>
+      <ul className={cn("vip_content__list", "container","list__reset")}>
+        {vipContentCardsList}
+      </ul>
+    </div>
+  );
+};
 export default VipContent;

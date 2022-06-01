@@ -1,0 +1,27 @@
+.container {
+	max-width: 1097px;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.list__reset {
+	list-style: none;
+}
+.link__reset {
+	text-decoration: none;
+}
+.vip_content__container{
+	padding-top: 40px;
+	margin: 0 auto;
+	padding-bottom:40px;
+}
+.vip_content__title{
+	text-align: center;
+}
+.vip_content__list{
+	margin: 0 auto;
+	padding-top:35px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+}

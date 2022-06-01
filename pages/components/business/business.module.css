@@ -1,0 +1,33 @@
+.container {
+	max-width: 1097px;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #fff;
+}
+.list__reset{
+	list-style: none;
+}
+.link__reset{
+	text-decoration: none;
+}
+.business__container{
+	max-width: 900px;
+	background-color: #002f34;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content:space-between;
+}
+.business__title{
+	color: #fff;
+	font-size:20px;
+}
+.business-button__link{
+	font-size: 14px;
+	padding: 11px 50px;
+	text-decoration: none;
+	background-color: #fff;
+	color:#002f34;
+	border-radius:4px;
+}

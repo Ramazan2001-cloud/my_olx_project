@@ -1,0 +1,13 @@
+.vip_content_card{
+	width:250px;
+	background-color:#FFFFFF;
+	padding-left:10px;
+	padding-top:10px;
+	margin-bottom:20px;
+}
+.vip_content_card__title{
+	font-size:17px;
+}
+.vip_content_card__image{
+	margin-bottom:8px;
+}
