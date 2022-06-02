@@ -2,7 +2,7 @@
   padding: 0 2rem;
 }
 /* --------------------------- */
-.container {
+.container{
   max-width: 1097px;
   margin: 0 auto;
   padding-left: 10px;
@@ -24,7 +24,7 @@
   background-color: #cbf7ee;
 }
 .footer__container{
-  background-color: #FFFFFF;
+  background-color: #f2f4f5;
 }
 /* ---------------------------- */
 .main {

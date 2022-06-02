@@ -1,8 +1,8 @@
 import styles from "./lastContent.module.css";
 import classNames from "classnames/bind";
 import LastContentItem from "./lastContent__item/lastContent__item";
-import lastContentFirstItem from "./lastContentFirstItem/lastContentFirstItem";
-
+import LastContentFirstItem from "./lastContentFirstItem/lastContentFirstItem";
+import LastContentSecondItem from "./lastContentSecondItem/lastContentSecondItem";
 let cn = classNames.bind(styles);
 
 const LastContent = () => {
@@ -42,18 +42,31 @@ const LastContent = () => {
     return <LastContentItem key={i} nameOfCategory={item} />;
   });
   //_________________________________
-
-  const elements2 = () => {
-    for (let i = 0; i < LastListContentItems.length; i++) {
-      if (LastListContentItems[i] === "Как продавать и покупать?") {
-        break;
-      }
-      return <lastContentFirstItem nameCategory={LastListContentItems[i]} />;
-    }
-  }
   
+  const elementsFirstItem = LastListContentItems.map((item, i) => {
+    while (i < 11) {
+      return <LastContentFirstItem key={i} nameCategory={item} />;
+    }
+  });
+
   //_________________________________
   
+  let p = LastListContentItems.reverse();
+  let lists = [];
+  for(let i = 0; i < p.length; i++) {
+    if(p[i] === "Партнёры"){
+      break;
+    }
+    lists.push(p[i]);
+  }
+  let newLists = lists.reverse();
+  
+  const elementsSecondItem = newLists.map((item, i) => {
+    return <LastContentSecondItem key={i} category={item} />;
+  });
+  
+
+  //_________________________________
   return (
     <>
       <div className={cn("lastContent__container", "container")}>
@@ -73,8 +86,8 @@ const LastContent = () => {
       </div>
       <span className={cn("line__content")}></span>
       <div className={cn("lastContent__lists", "container")}>
-        <ul className={cn("lastContent-first__list")}>{this.elements2}</ul>
-        <ul className={cn("lastContent-second__list")}></ul>
+        <ul className={cn("lastContent-first__list","list__reset")}>{elementsFirstItem}</ul>
+        <ul className={cn("lastContent-second__list","list__reset")}>{elementsSecondItem}</ul>
         <div className={cn("lastContent__logos")}>
           <div className={cn("lastContent-logos__links")}>
             <a href="#" className={cn("listContent-logoFirstLink")}>

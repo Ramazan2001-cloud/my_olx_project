@@ -3,13 +3,13 @@ import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
 
-import Maincategories from "./components/maincategories/Maincategories";
-import TopBarBaner from "./components/topbarbanner/topbarbaner";
-import SearchMain from "./components/searchmain/searchmain";
-import VipContent from "./components/vip_content/vip_content";
-import Business from "./components/business/business";
-import AboutStore from "./components/aboutStore/aboutStore";
-import LastContent from "./components/lastContent/lastContent";
+import Maincategories from "/components/maincategories/Maincategories";
+import TopBarBaner from "/components/topbarbanner/topbarbaner";
+import SearchMain from "/components/searchmain/searchmain";
+import VipContent from "/components/vip_content/vip_content";
+import Business from "/components/business/business";
+import AboutStore from "/components/aboutStore/aboutStore";
+import LastContent from "/components/lastContent/lastContent";
 
 const Home = () => {
   return (
