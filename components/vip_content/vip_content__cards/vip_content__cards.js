@@ -3,11 +3,11 @@ import classNames from "classnames/bind";
 
 let cn = classNames.bind(styles);
 
-const VipContentCards = ({title,address,price}) => {
+const VipContentCards = ({title,address,price,image}) => {
   return (
     <li className={cn("vip_content_card")}>
       <img
-        src="https://frankfurt.apollo.olxcdn.com/v1/files/ksv7347o7tz01-KZ/image;s=644x461"
+        src={image}
         alt="vip content image"
         className={cn("vip_content_card__image")}
         width="230px"

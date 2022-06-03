@@ -1,13 +1,18 @@
 import styles from "./categories.module.css";
+import { useState } from "react";
 import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
-export default function Categories({ name }) {
+export default function Categories({name,image}) { 
+  // const [count,setCount] = useState(false);
+  // const changeView = () => {
+  //     setCount(true);
+  // }
   return (
-    <li className={cn("maincategories__item")}>
+    <li  className={cn("maincategories__item")}>
       <a href="#" className={cn("maincategories__link", "link__reset")}>
         <img
-          src="https://categories.olxcdn.com/assets/categories/olxkz/uslugi-7-2x.png"
+          src={image}
           alt="category"
           width="70px"
           height="71px"
@@ -15,6 +20,7 @@ export default function Categories({ name }) {
         />
         <span className={cn("maincategories__name")}>{name}</span>
       </a>
+      {/* {count && <div className={cn("block")}>hello world</div>} */}
     </li>
   );
 }

@@ -1,17 +1,16 @@
 import "bootstrap/dist/css/bootstrap.css";
-import Header from '/components/header/header';
+// import Header from '/components/header/header';
 import { useEffect } from "react";
-
+import Layout from "../components/layout";
 
 const MyApp = ({Component,pageProps}) => {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
   }, []);
   return (
-    <>
-      <Header />
-      <Component {...pageProps}/>
-    </>
+    <Layout>
+        <Component {...pageProps} />
+    </Layout>
   );
 };
 export default MyApp;

@@ -1,20 +1,25 @@
 .list__reset {
-	list-style: none;
+  list-style: none;
 }
 .link__reset {
-	text-decoration: none;
+  text-decoration: none;
 }
-.maincategories__item{
-		width:110px;
-		height:110px;
-		margin-bottom:30px;
+.maincategories__item {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 30px;
 }
-.maincategories__image{
-		width:70px;
-		height:70px;
-		margin-bottom:19px;
+.maincategories__image {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 19px;
 }
-.maincategories__name{
-	display: block;
-	color:#000000;
+.maincategories__name {
+  display: block;
+  color: #000000;
+}
+.block{
+	width: 100px;
+	height: 50px;
+	padding-bottom:50px;
 }

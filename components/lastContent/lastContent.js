@@ -61,14 +61,16 @@ const LastContent = () => {
   }
   let newLists = lists.reverse();
   
+  
   const elementsSecondItem = newLists.map((item, i) => {
     return <LastContentSecondItem key={i} category={item} />;
   });
   
+  
 
   //_________________________________
   return (
-    <>
+    <footer className={cn("footer__container")}>
       <div className={cn("lastContent__container", "container")}>
         <img
           src="https://static.olx.kz/static/olxkz/packed/font/2fc1ef4e9c6a6dc640b6feb727836fabc7.svg"
@@ -112,7 +114,7 @@ const LastContent = () => {
           </span>
         </div>
       </div>
-    </>
+    </footer>
   );
 };
 export default LastContent;
