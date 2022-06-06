@@ -13,6 +13,7 @@ export const getStaticProps = async () => {
   const response1 = await fetch("http://localhost:3000/api/hello");
   const data1 = await response1.json();
   
+  //_______________________
   const response2 = await fetch("http://localhost:3000/api/vipProducts");
   const data2 = await response2.json();
   

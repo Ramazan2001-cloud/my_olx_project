@@ -1,15 +1,15 @@
-import styles from "./categories.module.css";
 import { useState } from "react";
+import styles from "./categories.module.css";
 import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
-export default function Categories({name,image}) { 
-  // const [count,setCount] = useState(false);
-  // const changeView = () => {
-  //     setCount(true);
-  // }
+export default function Categories({ name, image ,visibleModalActive}) {
+  const SubCategory = () => {};
   return (
-    <li  className={cn("maincategories__item")}>
+    <li
+      className={cn("maincategories__item", "maincategories__item__active")}
+      onClick={visibleModalActive}
+    >
       <a href="#" className={cn("maincategories__link", "link__reset")}>
         <img
           src={image}
@@ -20,7 +20,6 @@ export default function Categories({name,image}) {
         />
         <span className={cn("maincategories__name")}>{name}</span>
       </a>
-      {/* {count && <div className={cn("block")}>hello world</div>} */}
     </li>
   );
 }
