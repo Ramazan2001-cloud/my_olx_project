@@ -17,15 +17,19 @@ export const getStaticProps = async () => {
   const response2 = await fetch("http://localhost:3000/api/vipProducts");
   const data2 = await response2.json();
   
+  const response3 = await fetch("http://localhost:3000/api/subcategories");
+  const data3 = await response3.json();
+
   return {
     props: {
       data1,
       data2,
+      data3,
     },
   };
   
 };
-const Home = ({ data1, data2}) => {
+const Home = ({ data1, data2, data3}) => {
   return (
     <div className={cn("content")}>
       <section>
@@ -35,7 +39,7 @@ const Home = ({ data1, data2}) => {
         <SearchMain />
       </section>
       <section>
-        <Maincategories hello={data1} />
+        <Maincategories categories={data1} subcategories={data3}/>
       </section>
       <section>
         <VipContent product={data2}/>

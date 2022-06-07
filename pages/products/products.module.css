@@ -1,0 +1,58 @@
+.container{
+  max-width: 1097px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.list__reset {
+  list-style: none;
+}
+.link__reset {
+  text-decoration: none;
+}
+.products{
+	padding-top:100px;
+}
+.products__form{
+
+}
+.products__block{
+	display:flex;
+	margin: 0 auto;
+}
+.products__search-product{
+	max-width: 462px;
+	width: 462px;
+	height:72px;
+	padding-left:20px;
+	font-size: 18px;
+}
+.products__search-city{
+	max-width: 385px;
+	width: 385px;
+	height:72px;
+	padding-left:20px;
+	font-size: 18px;
+}
+.products__button{
+	width:100px;
+	height:72px;
+	font-size: 18px;
+}
+.products_radio-inputs{
+	display: flex;
+}
+.products_radio-input{
+	width:20px;
+	height:20px;
+	margin-top:30px;
+	margin-right: 10px;
+}
+.radio__p{
+	margin-bottom:10px;
+}
+.radio__p:nth-child(2){
+	margin-left:10px;
+}
+
+

@@ -3,12 +3,12 @@ import styles from "./categories.module.css";
 import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
-export default function Categories({ name, image ,visibleModalActive}) {
+export default function Categories({ name, image, visibleSubCategoryActive }) {
   const SubCategory = () => {};
   return (
     <li
       className={cn("maincategories__item", "maincategories__item__active")}
-      onClick={visibleModalActive}
+      onClick={visibleSubCategoryActive}
     >
       <a href="#" className={cn("maincategories__link", "link__reset")}>
         <img

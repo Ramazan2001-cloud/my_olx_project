@@ -6,13 +6,17 @@
 }
 .maincategories__item {
   width: 110px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   text-align: center;
 }
 .maincategories__image {
   width: 70px;
   height: 70px;
   margin-bottom: 19px;
+}
+.maincategories__image{
+  background-color:rgb(0, 255, 225);
+  border-radius:50%;
 }
 .maincategories__name {
   display: block;
