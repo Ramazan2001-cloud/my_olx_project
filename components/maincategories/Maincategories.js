@@ -12,7 +12,7 @@ const Maincategories = ({ categories, subcategories }) => {
   const visibleSubCategoryActive = () => {
     setSubCategory(!subCategory);
   };
- 
+
   const elements = categories.map((item, i) => {
     return (
       <Categories
@@ -23,7 +23,7 @@ const Maincategories = ({ categories, subcategories }) => {
       />
     );
   });
-
+  
   let c1 = [],
     c2 = [],
     c3 = [],
@@ -64,21 +64,20 @@ const Maincategories = ({ categories, subcategories }) => {
       </div>
       {subCategory && (
         <div className={cn("main_subcategory", "container")}>
-
           <Link href="/products">
             <a className={cn("main_subcategory__title-block")}>
-            <img
-              src="https://cdn-icons.flaticon.com/png/128/2989/premium/2989988.png?token=exp=1654583975~hmac=5b99ca09821d575208f27a3ebe8aa9eb"
-              alt="logo"
-              width="30px"
-              height="30px"
-              className={cn("main_subcategory__logo")}
-            />
-            <span className={cn("main_subcategory__title")}>
-              Посмотреть все объявления
-            </span>
-            <strong className={cn("main_sub-strong")}>в Услуги</strong>
-          </a>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/709/709586.png"
+                alt="logo"
+                width="15px"
+                height="15px"
+                className={cn("main_subcategory__logo")}
+              />
+              <span className={cn("main_subcategory__title")}>
+                Посмотреть все объявления
+              </span>
+              <strong className={cn("main_sub-strong")}>в Услуги</strong>
+            </a>
           </Link>
           <span className={cn("line")}></span>
 

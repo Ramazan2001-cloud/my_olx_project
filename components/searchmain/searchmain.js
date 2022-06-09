@@ -22,7 +22,7 @@ const SearchMain = () => {
           />
           <div className={cn("search__x")}>
             <img
-              src="https://cdn-icons.flaticon.com/png/128/2723/premium/2723639.png?token=exp=1653981468~hmac=b47cb9007edf68ac14def3686adb679b"
+              src="https://t4.ftcdn.net/jpg/00/75/69/13/240_F_75691329_CLLuXHPb6zqvgBnFkQjVnufsLEtmbL3e.jpg"
               alt="X"
               width="25px"
               height="25px"
@@ -32,7 +32,7 @@ const SearchMain = () => {
         <div className={cn("searchInputBlock__second")}>
           <div className={cn("search-second__block", "backGround_block-color")}>
             <img
-              src="https://cdn-icons.flaticon.com/png/128/3177/premium/3177361.png?token=exp=1653981527~hmac=8c3ce2582f02c81bf896d3d68eb084fb"
+              src="https://t4.ftcdn.net/jpg/02/72/89/67/240_F_272896745_tlTivOH81qWIVzz34KqFGm8LO3N9hMYQ.jpg"
               alt="location"
               width="30px"
               height="30px"

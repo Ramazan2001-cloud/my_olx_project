@@ -1,0 +1,45 @@
+.line{
+	display:block;
+	width:100%;
+	height:1px;
+	background-color:gray;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.list__reset{ 
+	list-style: none;
+}
+.sort{
+	display:flex;
+	justify-content:space-between;
+	padding-top:30px;
+}
+.text__sort{
+	margin-bottom:0px;
+}
+.price__select_block{
+	display:flex;
+	align-items:center;
+}
+.rows__block{
+	margin-left:10px;
+}
+.row_col__block{
+	margin-left:10px;
+}
+.text__sort{
+	margin-right:10px;
+}
+.select{
+	height:40px;
+	padding-left:10px;
+	font-size:18px;
+	border:none;
+}
+.categoryCount__list{
+	margin:0px;
+	padding:0px;
+	padding-top:30px;
+	display:flex;
+	flex-wrap:wrap;
+}

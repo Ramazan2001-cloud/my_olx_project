@@ -29,7 +29,7 @@ const Header = () => {
           <li className={cn("header__item")}>
             <a className={cn("header-msg__link", "link__reset")}>
               <img
-                src="https://cdn-icons.flaticon.com/png/128/3059/premium/3059975.png?token=exp=1653962304~hmac=f4dae583eba4167aab0d546b3e256e2a"
+                src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059975.png?token=exp=1654765224~hmac=95b15f532fc0c21015b3925f3e6e8b38"
                 width="30px"
                 height="30px"
                 alt="meassage logo"
