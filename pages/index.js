@@ -20,6 +20,7 @@ export const getStaticProps = async () => {
   const response3 = await fetch("http://localhost:3000/api/subcategories");
   const data3 = await response3.json();
 
+  
   return {
     props: {
       data1,

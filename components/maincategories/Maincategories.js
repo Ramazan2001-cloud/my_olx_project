@@ -1,59 +1,37 @@
 import styles from "./maincategories.module.css";
 import classNames from "classnames/bind";
 import Categories from "./categories/categories";
-import SubCategoryServices from "./sub_categories/sub_categories_services/sub_categories_services";
-import Link from "next/link";
+import ServicesCategory from "./servicesCategory/servicesCategory";
+import RealEstateCategory from "./realEstateCategory/realEstateCategory";
+import ElectronicsCategory from "./electronicsCategory/electronicsCategory";
+import HomeGardenCategory from "./home_gardenCategory/home_gardenCategory";
+import JobCategory from "./jobCategory/jobCategory";
+import FashionStylesCategory from "./fashion_stylesCategory/fashion_stylesCategory";
+import ChildrenWorldCategory from "./children-worldCategory/children-worldCategory";
+import HobbyRelaxSportCategory from "./hobby-relax-sportCategory/hobby-relax-sportCategory";
+import TransportCategory from "./transportCategory/transportCategory";
+// import Link from "next/link";
 import { useState } from "react";
 let cn = classNames.bind(styles);
 
 const Maincategories = ({ categories, subcategories }) => {
-  const [subCategory, setSubCategory] = useState(false);
 
-  const visibleSubCategoryActive = () => {
-    setSubCategory(!subCategory);
+  const [subCategory, setSubCategory] = useState(0);
+  const visibleSubCategory = () => {
+    setSubCategory(subCategory);
   };
-
+  
   const elements = categories.map((item, i) => {
     return (
       <Categories
         key={i}
         name={item.nameCategory}
         image={item.img}
-        visibleSubCategoryActive={visibleSubCategoryActive}
+        visibleSubCategoryActive={visibleSubCategory}
       />
     );
   });
   
-  let c1 = [],
-    c2 = [],
-    c3 = [],
-    c4 = [];
-  function subCategoryRows(start, finish, box) {
-    for (let i = start; i < subcategories.length; i++) {
-      if (i === finish) {
-        break;
-      }
-      box[i] = subcategories[i];
-    }
-  }
-
-  subCategoryRows(0, 5, c1);
-  const subCategoriesRow1 = c1.map((item, i) => {
-    return <SubCategoryServices key={i} name={item.name} />;
-  });
-  subCategoryRows(5, 10, c2);
-  const subCategoriesRow2 = c2.map((item, i) => {
-    return <SubCategoryServices key={i} name={item.name} />;
-  });
-  subCategoryRows(10, 15, c3);
-  const subCategoriesRow3 = c3.map((item, i) => {
-    return <SubCategoryServices key={i} name={item.name} />;
-  });
-  subCategoryRows(15, 20, c4);
-  const subCategoriesRow4 = c4.map((item, i) => {
-    return <SubCategoryServices key={i} name={item.name} />;
-  });
-
   return (
     <div className={cn("maincategories", "container")}>
       <div className={cn("maincategories__container", "container")}>
@@ -62,41 +40,15 @@ const Maincategories = ({ categories, subcategories }) => {
           {elements}
         </ul>
       </div>
-      {subCategory && (
-        <div className={cn("main_subcategory", "container")}>
-          <Link href="/products">
-            <a className={cn("main_subcategory__title-block")}>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/709/709586.png"
-                alt="logo"
-                width="15px"
-                height="15px"
-                className={cn("main_subcategory__logo")}
-              />
-              <span className={cn("main_subcategory__title")}>
-                Посмотреть все объявления
-              </span>
-              <strong className={cn("main_sub-strong")}>в Услуги</strong>
-            </a>
-          </Link>
-          <span className={cn("line")}></span>
-
-          <div className={cn("main_sub_lists")}>
-            <ul className={cn("main_sub", "list__reset")}>
-              {subCategoriesRow1}
-            </ul>
-            <ul className={cn("main_sub", "list__reset")}>
-              {subCategoriesRow2}
-            </ul>
-            <ul className={cn("main_sub", "list__reset")}>
-              {subCategoriesRow3}
-            </ul>
-            <ul className={cn("main_sub", "list__reset")}>
-              {subCategoriesRow4}
-            </ul>
-          </div>
-        </div>
-      )}
+      {subCategory && <ServicesCategory subCat={subcategories} />}
+      {subCategory && <RealEstateCategory subCat={subcategories} />}
+      {subCategory && <ElectronicsCategory subCat={subcategories} />}
+      {subCategory && <HomeGardenCategory subCat={subcategories} />}
+      {subCategory && <JobCategory subCat={subcategories} />}
+      {subCategory && <FashionStylesCategory subCat={subcategories} />}
+      {subCategory && <ChildrenWorldCategory subCat={subcategories} />}
+      {subCategory && <HobbyRelaxSportCategory subCat={subcategories} />}
+      {subCategory && <TransportCategory subCat={subcategories} />}
     </div>
   );
 };

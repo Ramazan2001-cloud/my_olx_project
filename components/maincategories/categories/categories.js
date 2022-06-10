@@ -3,8 +3,7 @@ import styles from "./categories.module.css";
 import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
-export default function Categories({ name, image, visibleSubCategoryActive }) {
-  const SubCategory = () => {};
+const Categories = ({ name, image, visibleSubCategoryActive }) => {
   return (
     <li
       className={cn("maincategories__item", "maincategories__item__active")}
@@ -23,3 +22,4 @@ export default function Categories({ name, image, visibleSubCategoryActive }) {
     </li>
   );
 }
+export default Categories;
