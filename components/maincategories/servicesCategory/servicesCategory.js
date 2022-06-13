@@ -5,12 +5,13 @@ let cn = classNames.bind(styles);
 
 const ServicesCategory = ({subCat}) => {
 	const sub_category1 = subCat[0].subcategory;
+
 	const elements = sub_category1.map((item, i) => {
 		return (
 			<SubCategory key={i} name={item.name}/>
 		)
 	});
-
+  
   return (
     <div className={cn("main_subcategory", "container")}>
       <a href="##" className={cn("main_subcategory__title-block")}>
@@ -27,7 +28,7 @@ const ServicesCategory = ({subCat}) => {
         <strong className={cn("main_sub-strong")}>в Услуги</strong>
       </a>
       <span className={cn("line")}></span>
-      <div className={cn("main_sub_lists")}>{elements}</div>
+      <ul className={cn("main_sub_lists", "list__reset")}>{elements}</ul>
     </div>
   );
 };

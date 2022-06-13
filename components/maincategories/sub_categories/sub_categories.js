@@ -4,7 +4,7 @@ let cn = classNames.bind(styles);
 
 const SubCategory = ({name}) => {
 	return (
-    <li>
+    <li className={cn("main__list-item")}>
       <a href="##" className={cn("main_sub_link")}>
         <img
           src="https://cdn-icons-png.flaticon.com/512/709/709586.png"

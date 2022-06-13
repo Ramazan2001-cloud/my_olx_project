@@ -8,6 +8,8 @@ import SearchMain from "/components/searchmain/searchmain";
 import VipContent from "/components/vip_content/vip_content";
 import Business from "/components/business/business";
 import AboutStore from "/components/aboutStore/aboutStore";
+import {Html} from "next/document";
+import next from "next";
 
 export const getStaticProps = async () => {
   const response1 = await fetch("http://localhost:3000/api/hello");

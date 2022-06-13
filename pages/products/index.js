@@ -14,7 +14,6 @@ export const getStaticProps = async () => {
       }
     }
 }
-
 const Products = ({data1}) => {
   
   const [select,setSelect] = useState(false);

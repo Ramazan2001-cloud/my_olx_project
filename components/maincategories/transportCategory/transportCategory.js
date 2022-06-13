@@ -5,7 +5,6 @@ let cn = classNames.bind(styles);
 
 const TransportCategory = ({ subCat }) => {
   const sub_category8 = subCat[8].subcategory;
-  console.log(sub_category8);
   const elements = sub_category8.map((item, i) => {
     return <SubCategory key={i} name={item.name} />;
   });
