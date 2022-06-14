@@ -45,6 +45,15 @@
 .main_sub{
 	padding:0px;
 }
+.maincategories__last-list{
+	margin:0px;
+	padding:0px;
+	display:grid;
+	padding-left:10px;
+	grid-template-columns: 110px 110px 110px 110px;
+	column-gap: 8px;
+	margin-bottom:20px;
+}
 /* .maincategories_sub_list__active{
 	display:block;
 }

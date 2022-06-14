@@ -1,11 +1,11 @@
 import SubCategory from "../sub_categories/sub_categories";
-import styles from "./jobCategory.module.css";
+import styles from "./animalsCategory.module.css";
 import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
-const JobCategory = ({ subCat }) => {
-  const sub_category5 = subCat[4].subcategory;
-  const elements = sub_category5.map((item, i) => {
+const AnimalsCategory = ({ subCat }) => {
+  const sub_category8 = subCat[9].subcategory;
+  const elements = sub_category8.map((item, i) => {
     return <SubCategory key={i} name={item.name} />;
   });
   return (
@@ -21,11 +21,11 @@ const JobCategory = ({ subCat }) => {
         <strong className={cn("main_subcategory__title")}>
           Посмотреть все объявления
         </strong>
-        <span className={cn("main_sub-strong")}> в Работа</span>
+        <span className={cn("main_sub-strong")}> в Животное</span>
       </a>
       <span className={cn("line")}></span>
-      <ul className={cn("main_sub_lists","list__reset")}>{elements}</ul>
+      <ul className={cn("main_sub_lists", "list__reset")}>{elements}</ul>
     </div>
   );
 };
-export default JobCategory;
+export default AnimalsCategory;

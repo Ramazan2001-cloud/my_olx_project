@@ -8,3 +8,10 @@
 .main_subcategory__logo{
 	margin-right:5px;
 }
+.main_sub_link_text{
+	transition:.1s;
+}
+.main_sub_link_text:hover{
+	background-color: #000;
+	color:#FFFFFF;
+}

@@ -18,13 +18,13 @@ const FashionStylesCategory = ({ subCat }) => {
           height="15px"
           className={cn("main_subcategory__logo")}
         />
-        <span className={cn("main_subcategory__title")}>
+        <strong className={cn("main_subcategory__title")}>
           Посмотреть все объявления
-        </span>
-        <strong className={cn("main_sub-strong")}> в Мода и стиль</strong>
+        </strong>
+        <span className={cn("main_sub-strong")}> в Мода и стиль</span>
       </a>
       <span className={cn("line")}></span>
-      <div className={cn("main_sub_lists")}>{elements}</div>
+      <ul className={cn("main_sub_lists","list__reset")}>{elements}</ul>
     </div>
   );
 };

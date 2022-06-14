@@ -24,4 +24,13 @@
 .main_subcategory__title-block{
 	display:block;
 	margin-bottom:15px;
+	text-decoration: none;
+	color: #000000;
+}
+.main_sub-strong{
+	color:rgb(148, 148, 148);
+}
+.main_subcategory__title:hover{
+	background-color: #000;
+	color:#FFFFFF;
 }

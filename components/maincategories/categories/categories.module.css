@@ -4,10 +4,12 @@
 .link__reset {
   text-decoration: none;
 }
-.maincategories__item {
+.maincategories__item{
   width: 110px;
-  /* margin-bottom: 30px; */
+  padding-top:15px;
   text-align: center;
+  transition:.3s;
+  border-radius:10px;
 }
 .maincategories__image {
   width: 70px;
@@ -22,6 +24,14 @@
   display: block;
   color: #000000;
 }
+li.maincategories__item>a.maincategories__link>span.maincategories__name{
+  transition:.2s;
+}
+li.maincategories__item:hover>a.maincategories__link>span.maincategories__name{
+  background-color: #000000;  
+  color: #FFFFFF;
+}
+
 .block{
 	width: 100px;
 	height: 50px;

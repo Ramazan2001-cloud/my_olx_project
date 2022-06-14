@@ -1,0 +1,22 @@
+[
+  {
+    "id": "10",
+    "img": "https://categories.olxcdn.com/assets/categories/olxkz/zhivotnye-35-2x.png",
+    "nameCategory": "Животные"
+  },
+  {
+    "id": "11",
+    "img": "https://categories.olxcdn.com/assets/categories/olxkz/otdam-darom-1151-2x.png",
+    "nameCategory": "Отдам даром"
+  },
+  {
+    "id": "12",
+    "img": "https://categories.olxcdn.com/assets/promo/olxkz/a-rent-1x.png",
+    "nameCategory": "Товаров и авто"
+  },
+  {
+    "id": "13",
+    "img": "https://categories.olxcdn.com/assets/promo/olxkz/stroitelstvo-i-remont-1x.png",
+    "nameCategory": "Строительство и ремонт"
+  }
+]

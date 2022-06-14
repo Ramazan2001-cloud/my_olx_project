@@ -15,6 +15,9 @@ export const getStaticProps = async () => {
   const response1 = await fetch("http://localhost:3000/api/hello");
   const data1 = await response1.json();
   
+  const response1_1 = await fetch("http://localhost:3000/api/last-categories");
+  const data1_1 = await response1_1.json();
+
   //_______________________
   const response2 = await fetch("http://localhost:3000/api/vipProducts");
   const data2 = await response2.json();
@@ -28,11 +31,12 @@ export const getStaticProps = async () => {
       data1,
       data2,
       data3,
+      data1_1,
     },
   };
   
 };
-const Home = ({ data1, data2, data3}) => {
+const Home = ({ data1, data2, data3, data1_1}) => {
   return (
     <div className={cn("content")}>
       <section>
@@ -42,10 +46,14 @@ const Home = ({ data1, data2, data3}) => {
         <SearchMain />
       </section>
       <section>
-        <Maincategories categories={data1} subcategories={data3}/>
+        <Maincategories
+          categories={data1}
+          lastcategories={data1_1}
+          subcategories={data3}
+        />
       </section>
       <section>
-        <VipContent product={data2}/>
+        <VipContent product={data2} />
       </section>
       <section className={cn("business__container")}>
         <Business />

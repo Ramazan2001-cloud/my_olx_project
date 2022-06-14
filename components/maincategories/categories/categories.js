@@ -3,15 +3,24 @@ import styles from "./categories.module.css";
 import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
-const Categories = ({ name, image, idCategory,visibleSubCategoryActive}) => {
-  
+const Categories = ({ name, image, idCategory, visibleSubCategoryActive }) => {
   return (
     <li
       id={idCategory}
       className={cn("maincategories__item", "maincategories__item__active")}
-      onClick={visibleSubCategoryActive}
+      onClick={(e) => {
+        e.preventDefault();
+        visibleSubCategoryActive();
+      }}
     >
-      <a href="#" className={cn("maincategories__link", "link__reset")}>
+      <a
+        href="#"
+        className={cn("maincategories__link", "link__reset")}
+        // onClick={(e) => {
+        //   e.preventDefault();
+        //   visibleSubCategoryActive();
+        // }}
+      >
         <img
           src={image}
           alt="category"
