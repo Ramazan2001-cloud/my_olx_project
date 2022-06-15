@@ -9,7 +9,7 @@ import VipContent from "/components/vip_content/vip_content";
 import Business from "/components/business/business";
 import AboutStore from "/components/aboutStore/aboutStore";
 import {Html} from "next/document";
-import next from "next";
+
 
 export const getStaticProps = async () => {
   const response1 = await fetch("http://localhost:3000/api/hello");
@@ -34,8 +34,8 @@ export const getStaticProps = async () => {
       data1_1,
     },
   };
-  
 };
+
 const Home = ({ data1, data2, data3, data1_1}) => {
   return (
     <div className={cn("content")}>

@@ -1,0 +1,7 @@
+.myaccount_span{
+	transition:.2s;
+}
+.myaccount_span:hover {
+	background-color:#000000;
+	color:#FFFFFF;
+}

@@ -38,7 +38,7 @@ const Maincategories = ({ categories, lastcategories, subcategories }) => {
       />
     );
   });
- 
+  
   return (
     <div className={cn("maincategories", "container")}>
       <div className={cn("maincategories__container", "container")}>

@@ -1,6 +1,6 @@
 const fs = require("fs");
 
 export default function handler(req, res) {
-  const json_data = fs.readFileSync("pages/api/api-data/hello.json");
+  const json_data = fs.readFileSync("pages/api/api-data/get-content-myaccount.json");
   res.status(200).json(JSON.parse(json_data));
 }

@@ -1,0 +1,27 @@
+.adcategory__list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  justify-content: space-between;
+}
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  margin-top: 15px;
+}
+.list__reset {
+  list-style: none;
+  padding: 0px;
+  padding-top: 20px;
+  margin: 0px;
+}
+.adcategory_button{
+	width:264px;
+	height:48px;
+}

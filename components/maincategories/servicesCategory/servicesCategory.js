@@ -28,6 +28,8 @@ const ServicesCategory = ({ subCat }) => {
           <span className={cn("main_sub-strong")}> в Услуги</span>
         </a>
       </Link>
+      <div className={cn("arrow_white")} />
+
       <span className={cn("line")}></span>
       <ul className={cn("main_sub_lists", "list__reset")}>{elements}</ul>
     </div>
