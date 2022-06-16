@@ -1,7 +1,12 @@
-.myaccount_span{
-	transition:.2s;
+.myaccount_span {
+  display: block;
+  transition: 0.2s;
+  color: rgb(113, 113, 113);
+  line-height: 20px;
 }
 .myaccount_span:hover {
-	background-color:#000000;
-	color:#FFFFFF;
+  /* text-decoration:underline; */
+  color: #000000;
+  /* border-bottom: 1px solid #000000;
+	padding-bottom:20px; */
 }

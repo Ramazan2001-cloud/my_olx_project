@@ -11,9 +11,10 @@
   margin-bottom: 15px;
 }
 .main_subcategory {
-  border: 1px solid rgb(187, 187, 187);
-  z-index: 100;
   position: relative;
+  border: 1px solid rgb(187, 187, 187);
+  z-index: 2;
+  background-color: #f2f4f5;
   /* padding-top:10px; */
 }
 .main_subcategory__logo {
@@ -28,7 +29,8 @@
   margin-bottom: 15px;
   text-decoration: none;
   color: #000000;
-  padding-top: 10px;
+  padding-top: 20px;
+  margin-bottom:20px;
 }
 .main_sub-strong {
   color: rgb(148, 148, 148);
@@ -43,9 +45,23 @@
   margin-bottom: 20px;
   width: 60px;
   height: 24px;
-  /* background-color:gray; */
   transform: rotate(45deg);
-  border: 1px solid #000000;
-  z-index: 1;
+  border: 1px solid rgb(148, 148, 148);
+  background-color: #f2f4f5;
   top: 1px;
+  left: 17px;
+}
+.arrow_white2 {
+  position: absolute;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  width: 24px;
+  height: 24px;
+  transform: rotate(45deg);
+  background-color: #f2f4f5;
+  top: -11px;
+  left: 21px;
+}
+.block {
+  position: relative;
 }

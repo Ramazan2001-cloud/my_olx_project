@@ -1,0 +1,28 @@
+.message_category{
+	padding:0px;
+	margin:0px;
+	margin-top:20px;
+	padding-top:100px;
+	background-color:#FFFFFF;
+	text-align:center;
+	padding-bottom:309px;
+}
+.message_content_descrLinks{
+	margin:0;
+	padding:0;
+}
+.message_content_text{
+	margin-bottom:20px;
+	font-size:20px;
+}
+.message_content_descr, .message_content_descrLinks{
+	max-width: 619px;
+	padding: 0px 20px 0px 20px;
+	margin: 0 auto;
+	margin-bottom:20px;
+	/* line-height:30px; */
+}
+.message_link{
+	text-decoration: none;
+}
+

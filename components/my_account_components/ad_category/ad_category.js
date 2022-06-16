@@ -10,24 +10,55 @@ const AdCategory = ({ adCatName }) => {
   const adCatItems = adCatName[0].subcategory.map((item) => {
     return <AdCategoryItem key={item.id} name={item.name} />;
   });
-	
   return (
     <div>
       <ul className={cn(styles.adcategory__list)}>{adCatItems}</ul>
       <span className={cn(styles.line)}></span>
-      <ul className={cn(styles.adcategory_list, styles.list__reset)}>
-        <li className={cn(styles.adcategory_item)}>
-          <button className={cn(styles.adcategory_button)}>
-            <img
-              src="https://cdn-icons.flaticon.com/png/512/3839/premium/3839020.png?token=exp=1655297154~hmac=2455e99535ddba14830dcb6b4a30f0be"
-							width="20px"
-							height="20px"
-              alt="filter"
+      <form action="#">
+        <ul className={cn(styles.adcategory_list, styles.list__reset)}>
+          <li className={cn(styles.adcategory_item)}>
+            <button className={cn(styles.adcategory_button)} disabled>
+              <img
+                src="https://cdn-icons.flaticon.com/png/128/3161/premium/3161370.png?token=exp=1655361764~hmac=4a3a4c0966bc85bf52792572d4e7d2a4"
+                width="30px"
+                height="30px"
+                alt="filter"
+                className={cn(styles.adcategory_button_img)}
+              />
+              <span>Добавить фильтр</span>
+            </button>
+          </li>
+          <li className={cn(styles.adcategory_item)}>
+            <input
+              type="search"
+              placeholder="Заголовоку или ID"
+              className={cn(styles.adcategory_item_image)}
+              disabled
             />
-            <span>Добавить фильтр</span>
-          </button>
-        </li>
-      </ul>
+          </li>
+          <li className={cn(styles.adcategory_item)}>
+            <input
+              type="button"
+              value="Любая категория"
+              className={cn(styles.adcategory_item_category)}
+              disabled
+            />
+          </li>
+          <li className={cn(styles.adcategory_item)}>
+            <input
+              type="button"
+              value="Сортировать"
+              className={cn(styles.adcategory_item_category)}
+              disabled
+            />
+          </li>
+        </ul>
+        <div className={cn(styles.adcategory_blockAd)}>
+          <span>Всего объявлений: 0</span>
+          <span className={cn(styles.line)} />
+          <input type="checkbox" className={cn(styles.adcategory_checkbox)}/>
+        </div>
+      </form>
     </div>
   );
 };

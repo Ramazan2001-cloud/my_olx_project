@@ -12,26 +12,28 @@ const ServicesCategory = ({ subCat }) => {
   });
   
   return (
-    <div className={cn("main_subcategory", "container")}>
-      <Link href={"/filterPage"}>
-        <a className={cn("main_subcategory__title-block")}>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/709/709586.png"
-            alt="logo"
-            width="15px"
-            height="15px"
-            className={cn("main_subcategory__logo")}
-          />
-          <strong className={cn("main_subcategory__title")}>
-            Посмотреть все объявления
-          </strong>
-          <span className={cn("main_sub-strong")}> в Услуги</span>
-        </a>
-      </Link>
-      <div className={cn("arrow_white")} />
-
-      <span className={cn("line")}></span>
-      <ul className={cn("main_sub_lists", "list__reset")}>{elements}</ul>
+    <div className={cn("block")}>
+      <div className={cn("arrow_white")}></div>
+      <div className={cn("main_subcategory", "container")}>
+        <Link href={"/filterPage"}>
+          <a className={cn("main_subcategory__title-block")}>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/709/709586.png"
+              alt="logo"
+              width="15px"
+              height="15px"
+              className={cn("main_subcategory__logo")}
+            />
+            <strong className={cn("main_subcategory__title")}>
+              Посмотреть все объявления
+            </strong>
+            <span className={cn("main_sub-strong")}> в Услуги</span>
+          </a>
+        </Link>
+        <div className={cn("arrow_white2")} />
+        <span className={cn("line")}></span>
+        <ul className={cn("main_sub_lists", "list__reset")}>{elements}</ul>
+      </div>
     </div>
   );
 };

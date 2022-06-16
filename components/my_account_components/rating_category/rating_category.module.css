@@ -1,0 +1,21 @@
+.rating_category__container {
+	margin: 0;
+	padding: 0;
+	padding-top:150px;
+}
+.rating_category__content {
+  text-align: center;
+}
+.rating_iamge_block {
+  width: 116px;
+  margin: 0 auto;
+	margin-bottom: 40px;
+}
+.rating_image {
+  display: flex;
+  justify-content: center;
+}
+.rating_category__descr {
+  margin: 0;
+  padding: 0;
+}

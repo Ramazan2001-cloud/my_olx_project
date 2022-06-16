@@ -21,7 +21,48 @@
   padding-top: 20px;
   margin: 0px;
 }
-.adcategory_button{
-	width:264px;
-	height:48px;
+.adcategory_button {
+  width: 264px;
+  height: 48px;
+}
+.adcategory_button_img {
+  margin-right: 10px;
+}
+.adcategory_item_image {
+  background: url("https://cdn-icons-png.flaticon.com/128/622/622669.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 12px 10px;
+  padding-left: 50px;
+  width: 264px;
+  height: 48px;
+}
+.adcategory_item_category {
+  width: 264px;
+  height: 48px;
+}
+.adcategory_list{
+  display:flex;
+  justify-content:space-between;
+}
+.adcategory_item_category{
+  background-image: url('https://cdn-icons.flaticon.com/png/512/2951/premium/2951160.png?token=exp=1655368991~hmac=06ae54cacfd93ba71ce3bce5f081809c');
+  background-repeat: no-repeat;
+  background-size:40px;
+  background-position: 216px 3px;
+  text-align: left;
+  padding-left:20px;
+}
+.line{
+  width:100%;
+  height:0.5px;
+  background-color:gray;
+}
+.adcategory_blockAd{
+  padding-top:15px;
+}
+.adcategory_checkbox{
+  margin-top:20px;
+  width:25px;
+  height:25px;
 }
