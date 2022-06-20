@@ -1,0 +1,12 @@
+@import "../../myaccount/message/message.module.scss";
+
+.myaccount_main {
+  background-color: #f2f4f5;
+	.myaccount__container {
+    padding-top: 35px;
+			.message__title {
+      font-size: $myaccount-fontSize;
+      font-weight: $myaccount-fontWieght;
+    }
+  }
+}

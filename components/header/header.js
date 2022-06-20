@@ -36,7 +36,7 @@ const Header = () => {
                 className={cn("header-logo__msg")}
               />
             </a>
-            <Link href="/myaccount">
+            <Link href="/myaccount/message">
               <a className={cn("header__text", "link__reset")}>Сообщения</a>
             </Link>
           </li>
@@ -61,7 +61,7 @@ const Header = () => {
                 className={cn("header-logo__myProfile")}
               />
             </a>
-            <Link href="/myaccount">
+            <Link href="/myaccount/ad">
               <a className={cn("header__text", "link__reset")}>Мой профиль</a>
             </Link>
           </li>

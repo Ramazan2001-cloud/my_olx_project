@@ -3,16 +3,22 @@ import AdCategoryItem from "./ad_category_item/ad_category_item";
 import { useState } from "react";
 import cn from "classnames";
 
-const AdCategory = ({ adCatName }) => {
-  // for (let i = 0; i < adCatName[0].subcategory.length; i++) {
-  //   console.log(adCatName[0].subcategory[i].name);
-  // }
-  const adCatItems = adCatName[0].subcategory.map((item) => {
-    return <AdCategoryItem key={item.id} name={item.name} />;
-  });
+const AdCategory = () => {
+  const adCatItems = [
+    "Активные",
+    "Ожидающие",
+    "Неоплаченные",
+    "Неактивные",
+    "Отклоненные",
+  ];
+  const elements = adCatItems.map((item, i) => {
+    return(
+      <AdCategoryItem key={i} name={item}/>
+    )
+  })
   return (
     <div>
-      <ul className={cn(styles.adcategory__list)}>{adCatItems}</ul>
+      <ul className={cn(styles.adcategory__list)}>{elements}</ul>
       <span className={cn(styles.line)}></span>
       <form action="#">
         <ul className={cn(styles.adcategory_list, styles.list__reset)}>
@@ -56,7 +62,7 @@ const AdCategory = ({ adCatName }) => {
         <div className={cn(styles.adcategory_blockAd)}>
           <span>Всего объявлений: 0</span>
           <span className={cn(styles.line)} />
-          <input type="checkbox" className={cn(styles.adcategory_checkbox)}/>
+          <input type="checkbox" className={cn(styles.adcategory_checkbox)} />
         </div>
       </form>
     </div>
