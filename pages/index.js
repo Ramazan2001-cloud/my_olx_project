@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
   
   const response1_1 = await fetch("http://localhost:3000/api/last-categories");
   const data1_1 = await response1_1.json();
-
+  
   //_______________________
   const response2 = await fetch("http://localhost:3000/api/vipProducts");
   const data2 = await response2.json();

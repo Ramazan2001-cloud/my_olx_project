@@ -1,0 +1,18 @@
+.more_info_category__block {
+  display: flex;
+  padding-top: 70px;
+  align-items: center;
+	padding-left:7px;
+  .more_info__list {
+    display: flex;
+  }
+}
+.more_info_back__block {
+  color: #000000;
+  margin-right: 20px;
+}
+.more_info__item > .more_info__link {
+  color: rgb(128, 128, 128);
+  margin-right: 7px;
+}
+
