@@ -5,10 +5,10 @@ import VipContentCards from "./vip_content__cards/vip_content__cards";
 
 const VipContent = ({ product }) => {
 
-  const vipContentCardsList = product.map((item, i) => {
+  const vipContentCardsList = product.map((item) => {
     return (
       <VipContentCards
-        key={i}
+        key={item.id}
         title={item.vip_product_name}
         address={item.address}
         price={item.price}

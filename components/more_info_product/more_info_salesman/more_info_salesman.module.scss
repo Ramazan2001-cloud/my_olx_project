@@ -1,0 +1,111 @@
+.more_salesman {
+  background-color: #ffffff;
+  max-width: 430px;
+  max-height: 420px;
+  padding: 20px 20px 20px 20px;
+  // border: 1px solid #000000;
+  border-radius: 5px;
+}
+.more_salesman__AdUser {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.more_salesman__logo {
+  margin-right: 15px;
+}
+.more_salesman__name {
+  margin: 0px;
+}
+.more_salesman_info__block {
+  display: flex;
+  margin-bottom: 20px;
+}
+.more_salesman__date {
+  margin: 0px;
+  padding: 0;
+}
+.more_salesman__online {
+  display: block;
+}
+.more_salesman__user {
+  background-color: rgb(242, 244, 245);
+  max-width: 343px;
+  height: 130px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.more_salesman__question__block {
+  display: flex;
+  margin-bottom: 3px;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+  .question_mark__logo__block {
+    background-color: rgb(216, 223, 224);
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 3px;
+
+    &:first-child {
+      margin-left: 2px;
+    }
+  }
+}
+.question__mark__text {
+  // max-width: 120px;
+  margin-left: 10px;
+}
+.more_salesman__rating {
+  margin-left: 10px;
+  color: #002f34;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.more_salesman__button_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .more_info__button_number {
+    border-color: #002f34;
+  }
+  .more_info__button_number,
+  .more_info__button_msg {
+    width: 164px;
+    height: 48px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+}
+.more_salesman__ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #002f34;
+  font-size: 15px;
+}
+.more_salesman__span {
+  padding-bottom: 3px;
+  font-weight: 400;
+}
+.more_salesman_first_text,
+.more_salesman_second_text {
+  font-weight: 700;
+}
+.more_info__button_number, .more_info__button_msg{
+  transition:.2s;
+}
+.more_info__button_number:hover, .more_info__button_msg:hover{
+  color:#b3b3b3;
+  opacity:60%;
+}
+.more_salesman_first_text {
+  color: #002f34;
+}
+.more_info__button_msg {
+  background-color: #002f34;
+}
+.more_salesman_second_text {
+  color: #ffffff;
+}
+

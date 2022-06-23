@@ -1,8 +1,10 @@
 .carousel__wrapper{
-	width: 750px;
+	max-width: 670px;
 	padding:30px 30px 30px 30px;
 	background-color: #FFFFFF;
-	margin-top:100px;
+	border-radius: 5px;
+	// border:1px solid #000000;
+	// margin-top:100px;
 	transition:.1s;
 }
 .carousel-item{

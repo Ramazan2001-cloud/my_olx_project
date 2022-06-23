@@ -1,0 +1,28 @@
+.map_container {
+	display:flex;
+	justify-content: space-between;
+	margin-top:25px;
+  max-width: 383px;
+  padding: 20px;
+	background-color:#FFFFFF;
+	margin-bottom:30px;
+	border-radius: 5px;
+}
+.map__title{
+	font-size: 20px;
+	margin-bottom:30px;
+}
+.map__location_logo{
+	margin-right:10px;
+}
+.map__location__{
+	margin:0px;
+	display:flex;
+}
+.title__city, .title__area{
+	margin:0px;
+	display:block;
+}
+.map_image{
+	margin-top:70px;
+}

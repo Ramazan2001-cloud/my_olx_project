@@ -2,6 +2,7 @@ import styles from "./more_info_sliders.module.scss";
 import classnames from "classnames/bind";
 let cn = classnames.bind(styles);
 const MoreInfoSliders = ({ moreinfo }) => {
+  // console.log(moreinfo[0].id);
   return (
     <div
       id="carouselExampleCaptions"
@@ -11,7 +12,7 @@ const MoreInfoSliders = ({ moreinfo }) => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            src={moreinfo.product_images[0]}
+            src={moreinfo[0].product_images[0]}
             // className="d-block w-100"
             alt="..."
             width="750px"
@@ -20,7 +21,7 @@ const MoreInfoSliders = ({ moreinfo }) => {
         </div>
         <div className="carousel-item">
           <img
-            src={moreinfo.product_images[1]}
+            src={moreinfo[0].product_images[1]}
             alt="..."
             width="750px"
             height="580px"
@@ -28,7 +29,7 @@ const MoreInfoSliders = ({ moreinfo }) => {
         </div>
         <div className="carousel-item">
           <img
-            src={moreinfo.product_images[2]}
+            src={moreinfo[0].product_images[2]}
             alt="..."
             width="750px"
             height="580px"
@@ -36,7 +37,7 @@ const MoreInfoSliders = ({ moreinfo }) => {
         </div>
         <div className="carousel-item">
           <img
-            src={moreinfo.product_images[3]}
+            src={moreinfo[0].product_images[3]}
             alt="..."
             width="750px"
             height="580px"
@@ -44,7 +45,7 @@ const MoreInfoSliders = ({ moreinfo }) => {
         </div>
         <div className="carousel-item">
           <img
-            src={moreinfo.product_images[4]}
+            src={moreinfo[0].product_images[4]}
             alt="..."
             width="750px"
             height="580px"
@@ -52,7 +53,7 @@ const MoreInfoSliders = ({ moreinfo }) => {
         </div>
         <div className="carousel-item">
           <img
-            src={moreinfo.product_images[5]}
+            src={moreinfo[0].product_images[5]}
             alt="..."
             width="750px"
             height="580px"
@@ -60,7 +61,7 @@ const MoreInfoSliders = ({ moreinfo }) => {
         </div>
         <div className="carousel-item">
           <img
-            src={moreinfo.product_images[6]}
+            src={moreinfo[0].product_images[6]}
             alt="..."
             width="750px"
             height="580px"
