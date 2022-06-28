@@ -1,0 +1,15 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.item__1 {
+  background-color: green;
+}
+.item__2 {
+  background-color: red;
+}
+.item__3 {
+  background-color: blue;
+}

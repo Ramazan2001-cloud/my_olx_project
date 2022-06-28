@@ -1,0 +1,101 @@
+.productAd__container {
+  max-width: 670px;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 25px;
+  .productAd__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .productAd__title {
+    font-size: 32px;
+    color: #002f34;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+    font-weight: 400;
+  }
+  .productAd__price {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 42px;
+    margin-top: 16px;
+    color: #002f34;
+  }
+  .productAd__span {
+    font-size: 16px;
+    line-height: 20px;
+    color: #406367;
+    white-space: pre;
+    margin-left: 4px;
+  }
+  .productAd__characteristic {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .productAd_descr__content {
+    .productAd_descr__title {
+      line-height: 26px;
+      font-weight: 650;
+      color: #002f34;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 16px;
+      margin-top: 4px;
+    }
+    .productAd_descr {
+      font-size: 16px;
+      color: #002f34;
+      line-height: 22px;
+      width: 100%;
+      font-family: inherit;
+    }
+  }
+  .line {
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: gray;
+  }
+  .productAd__footer {
+    display: flex;
+    justify-content: space-between;
+		align-items: center;
+    margin-top: 10px;
+		margin-bottom:5px;
+    .productAd__id {
+      font-size: 12px;
+      color: #406367;
+      margin: 0;
+      font-size: 12px;
+    }
+    .productAd__views {
+			margin:0;
+			padding:0;
+      font-size: 12px;
+      line-height: 14px;
+      color: rgb(64, 99, 103);
+    }
+    .productAd__id__link {
+			align-items: center;
+			.productAd__descr__image{
+				width:15px;
+				height:15px;
+			}
+      .productAd__descr__span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #002f34;
+        margin: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+}

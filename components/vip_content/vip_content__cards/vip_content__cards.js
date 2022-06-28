@@ -1,14 +1,11 @@
 import styles from "./vip_content__cards.module.css";
 import classNames from "classnames/bind";
 import Link from "next/link";
-import {useState} from "react";
 let cn = classNames.bind(styles);
 
-const VipContentCards = ({title,address,price,image}) => {
-  const[idAd,seIdAd] = useState(0);
-  
+const VipContentCards = ({Id,title, address, price, image, visibleID }) => {
   return (
-    <li className={cn("vip_content_card")}>
+    <li className={cn("vip_content_card")} onClick={visibleID}>
       <Link href="/more_info_product">
         <a>
           <img

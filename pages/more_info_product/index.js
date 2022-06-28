@@ -6,6 +6,8 @@ import MoreInfoSliders from "../../components/more_info_product/more_info_slider
 import MoreInfoSalesman from "../../components/more_info_product/more_info_salesman/more_info_salesman";
 import MoreInfoMap from "../../components/more_info_product/more_info_map/more_info_map";
 import MoreInfoAd from "../../components/more_info_product/more_info_ad/more_info_ad";
+import MoreInfoAuthor from "../../components/more_info_product/more_info_author/more_info_author";
+import MoreInfoCarousel from "../../components/more_info_product/more_info_carousel/more_info_carousel";
 import cn from "classnames";
 
 export const getStaticProps = async () => {
@@ -25,7 +27,7 @@ export const getStaticProps = async () => {
   const vipAdResponse = await fetch("http://localhost:3000/api/vipProducts");
   const vipData = await vipAdResponse.json();
 
-
+  
 
   return {
     props: {
@@ -41,7 +43,9 @@ const MoreInfoProduct = ({
   categoryData,
   subcategoryData,
   vipData,
-}) => {
+}) =>
+
+{
   return (
     <main className={cn(styles.main, gloabalStyles.content)}>
       <div className={cn(styles.main_container, gloabalStyles.container)}>
@@ -58,6 +62,8 @@ const MoreInfoProduct = ({
           </div>
         </div>
         <MoreInfoAd ad_info={AdData} ad_check={vipData} />
+        <MoreInfoAuthor infoAuthor={AdData} />
+        <MoreInfoCarousel/>
       </div>
     </main>
   );
