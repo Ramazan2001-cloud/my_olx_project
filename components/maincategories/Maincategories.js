@@ -17,7 +17,20 @@ let cn = classNames.bind(styles);
 
 const Maincategories = ({ categories, lastcategories, subcategories }) => {
   const [subCategory, setSubCategory] = useState(false);
-  const elements = categories.map((item) => {
+  delete categories[9];
+  const categoryImageLogo = [
+    "https://categories.olxcdn.com/assets/categories/olxkz/uslugi-7-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/nedvizhimost-1-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/elektronika-37-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/dom-i-sad-899-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/rabota-6-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/moda-i-stil-891-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/detskiy-mir-36-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/hobbi-otdyh-i-sport-903-2x.png",
+    "https://categories.olxcdn.com/assets/categories/olxkz/transport-3-2x.png",
+  ];
+  
+  const elements = categories.map((item,i) => {
     const visibleSubCategory = () => {
       setSubCategory((prev) => {
         if (prev == item.id) {
@@ -30,15 +43,14 @@ const Maincategories = ({ categories, lastcategories, subcategories }) => {
     return (
       <Categories
         key={item.id}
-        name={item.nameCategory}
-        image={item.img}
+        name={item.name}
+        image={categoryImageLogo[i]}
         visibleSubCategoryActive={visibleSubCategory}
         idCategory={item.id}
-        // backGround={}
       />
     );
   });
-  
+
   return (
     <div className={cn("maincategories", "container")}>
       <div className={cn("maincategories__container", "container")}>

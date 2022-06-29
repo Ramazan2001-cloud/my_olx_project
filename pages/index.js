@@ -11,45 +11,76 @@ import AboutStore from "/components/aboutStore/aboutStore";
 import { Html } from "next/document";
 
 export const getStaticProps = async () => {
-  const response1 = await fetch("http://localhost:3000/api/hello");
-  const data1 = await response1.json();
-
-    // const response7 = await fetch(
-    //   "http://dev.qoldan.com/api/ads/ad_cat/find_all"
-    // );
-    // const data5 = await response7.json();
-
-
-  const response1_1 = await fetch("http://localhost:3000/api/last-categories");
-  const data1_1 = await response1_1.json();
-
-  // const subcategoryResponse = await fetch(
-  //   "http://dev.qoldan.com/api/ads/core-api/ad_cat/find_subcat"
-  // );
-  // const subcategoryData = await subcategoryResponse.json();
-
-
-  //_______________________
-  const response2 = await fetch("http://localhost:3000/api/vipProducts");
-  const data2 = await response2.json();
-
-  const response3 = await fetch("http://localhost:3000/api/subcategories");
-  const data3 = await response3.json();
-
-  return {
-    props: {
-      data1,
-      data2,
-      data3,
-      data1_1,
-      // data5,
-      // subcategoryData,
-    },
-  };
+  try {
+    // http://localhost:3000/api/hello
+    const categoryResponse = await fetch(
+      "http://dev.qoldan.com/api/ads/ad_cat/find_all"
+    );
+    const categoryData = await categoryResponse.json();
+    //________________________________________________
+    const LastCategoriesResponse = await fetch(
+      "http://localhost:3000/api/last-categories"
+    );
+    const LastCategoriesData = await LastCategoriesResponse.json();
+    //________________________________________________
+    const SubCategoriesResponse = await fetch(
+      "http://localhost:3000/api/subcategories"
+    );
+    const SubCategoriesData = await SubCategoriesResponse.json();
+    //________________________________________________
+    const VipProductsResponse = await fetch(
+      "http://localhost:3000/api/vipProducts"
+    );
+    const VipProductsData = await VipProductsResponse.json();
+    //________________________________________________
+    if (!categoryData) {
+      return {
+        notFound: true,
+      };
+    }
+    if (!LastCategoriesData) {
+      return {
+        notFound: true,
+      };
+    }
+    if (!SubCategoriesData) {
+      return {
+        notFound: true,
+      };
+    }
+    if (!VipProductsData) {
+      return {
+        notFound: true,
+      };
+    }
+    return {
+      props: {
+        categoryData: categoryData,
+        LastCategoriesData: LastCategoriesData,
+        SubCategoriesData: SubCategoriesData,
+        VipProductsData: VipProductsData,
+      },
+    };
+  } catch (e) {
+    return {
+      props: {
+        categoryData: null,
+        LastCategoriesData: null,
+        SubCategoriesData: null,
+        VipProductsData: null,
+      },
+    };
+  }
+  // http://dev.qoldan.com/api/ads/
 };
+const Home = ({
+  categoryData,
+  LastCategoriesData,
+  SubCategoriesData,
+  VipProductsData,
+}) => {
+  console.log(categoryData);
 
-const Home = ({ data1, data2, data3, data1_1}) => {
-  // console.log(data5);
   return (
     <div className={cn("content")}>
       <section>
@@ -60,13 +91,13 @@ const Home = ({ data1, data2, data3, data1_1}) => {
       </section>
       <section>
         <Maincategories
-          categories={data1}
-          lastcategories={data1_1}
-          subcategories={data3}
+          categories={categoryData}
+          lastcategories={LastCategoriesData}
+          subcategories={SubCategoriesData}
         />
       </section>
       <section>
-        <VipContent product={data2} />
+        <VipContent product={VipProductsData} />
       </section>
       <section className={cn("business__container")}>
         <Business />

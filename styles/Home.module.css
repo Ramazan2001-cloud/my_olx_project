@@ -1,12 +1,13 @@
-.container {
+/* .container {
   padding: 0 2rem;
-}
+} */
 /* --------------------------- */
 .container{
   max-width: 1097px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+  font-family: inherit;
 }
 .list__reset {
   list-style: none;

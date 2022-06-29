@@ -11,3 +11,7 @@
 .vip_content_card__image{
 	margin-bottom:8px;
 }
+.vip_content__link{
+	text-decoration: none;
+	color:#000000;
+}

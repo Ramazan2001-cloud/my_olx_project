@@ -63,7 +63,7 @@ const MoreInfoProduct = ({
         </div>
         <MoreInfoAd ad_info={AdData} ad_check={vipData} />
         <MoreInfoAuthor infoAuthor={AdData} />
-        <MoreInfoCarousel/>
+        {/* <MoreInfoCarousel/> */}
       </div>
     </main>
   );

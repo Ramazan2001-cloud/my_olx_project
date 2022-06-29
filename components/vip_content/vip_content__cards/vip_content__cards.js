@@ -7,7 +7,7 @@ const VipContentCards = ({Id,title, address, price, image, visibleID }) => {
   return (
     <li className={cn("vip_content_card")} onClick={visibleID}>
       <Link href="/more_info_product">
-        <a>
+        <a className={cn("vip_content__link")}>
           <img
             src={image}
             alt="vip content image"

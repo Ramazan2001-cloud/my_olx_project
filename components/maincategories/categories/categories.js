@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
 const Categories = ({ name, image, idCategory, visibleSubCategoryActive }) => {
+  
   return (
     <li
       id={idCategory}

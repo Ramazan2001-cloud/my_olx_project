@@ -66,16 +66,17 @@ const Header = () => {
             </Link>
           </li>
           <li className={cn("header__item")}>
-            <a
-              href="#"
-              className={cn(
-                "header-button__link",
-                "link__reset",
-                "header__text"
-              )}
-            >
-              Подать объявление
-            </a>
+            <Link href="/place_an_ad">
+              <a
+                className={cn(
+                  "header-button__link",
+                  "link__reset",
+                  "header__text"
+                )}
+              >
+                Подать объявление
+              </a>
+            </Link>
           </li>
         </ul>
       </div>

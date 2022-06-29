@@ -1,0 +1,28 @@
+.photo__content {
+  padding: 32px;
+  background-color: #ffffff;
+  .photo__title {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    color: rgb(0, 47, 52);
+    margin: 0px 0px 8px;
+  }
+  .photo__descr {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(127, 151, 153);
+    margin: 0px 0px 16px;
+  }
+}
+.photo__add_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 682px;
+  min-height:256px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-content:space-between;
+}

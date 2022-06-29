@@ -1,0 +1,35 @@
+.photo__item {
+  border-radius: 4px;
+  background: rgb(242, 244, 245);
+  width: 159px;
+  height: 120px;
+  padding: 0px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+	
+	// .photo__image{
+
+	// }
+  .inputFile {
+		position: absolute;
+    opacity: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0px;		
+  }
+}
