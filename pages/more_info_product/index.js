@@ -26,9 +26,7 @@ export const getStaticProps = async () => {
 
   const vipAdResponse = await fetch("http://localhost:3000/api/vipProducts");
   const vipData = await vipAdResponse.json();
-
   
-
   return {
     props: {
       AdData,
@@ -43,9 +41,7 @@ const MoreInfoProduct = ({
   categoryData,
   subcategoryData,
   vipData,
-}) =>
-
-{
+}) => {
   return (
     <main className={cn(styles.main, gloabalStyles.content)}>
       <div className={cn(styles.main_container, gloabalStyles.container)}>
@@ -63,7 +59,6 @@ const MoreInfoProduct = ({
         </div>
         <MoreInfoAd ad_info={AdData} ad_check={vipData} />
         <MoreInfoAuthor infoAuthor={AdData} />
-        {/* <MoreInfoCarousel/> */}
       </div>
     </main>
   );

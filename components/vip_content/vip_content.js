@@ -2,12 +2,13 @@ import styles from "./vip_content.module.css";
 import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 import { useState } from "react";
-import MoreInfoAd from "../more_info_product/more_info_ad/more_info_ad";
 import VipContentCards from "./vip_content__cards/vip_content__cards";
 
 const VipContent = ({ product }) => {
-
   const [set, foo] = useState(false);
+
+  const name = "hello world";
+
   const vipContentCardsList = product.map((item) => {
     const NewFoo = () => {
       foo((prev) => {
@@ -15,10 +16,11 @@ const VipContent = ({ product }) => {
           return !prev;
         }
         prev = "";
+
         return prev + item.id;
       });
     };
-    
+
     return (
       <VipContentCards
         key={item.id}

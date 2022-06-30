@@ -2,9 +2,9 @@
   background-color: #ffffff;
   margin-top: 10px;
   padding: 32px;
-	.descr__span{
-		margin-bottom:5px;
-	}
+  .descr__span {
+    margin-bottom: 5px;
+  }
   .descr__textarea__block {
     max-width: 682px;
     height: 260px;
@@ -24,7 +24,17 @@
       padding: 16px 48px 16px 16px;
       resize: none;
       width: 100%;
-			height:100%;
+      height: 100%;
+    }
+  }
+  .descr__footer {
+    margin-top: 10px;
+    max-width: 682px;
+    display: flex;
+    justify-content: space-between;
+    .descr__footer__span {
+      font-size: 14px;
+      color: rgb(127, 151, 153);
     }
   }
 }

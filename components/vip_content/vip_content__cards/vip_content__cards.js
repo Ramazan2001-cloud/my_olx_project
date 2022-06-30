@@ -1,6 +1,7 @@
 import styles from "./vip_content__cards.module.css";
 import classNames from "classnames/bind";
 import Link from "next/link";
+
 let cn = classNames.bind(styles);
 
 const VipContentCards = ({Id,title, address, price, image, visibleID }) => {

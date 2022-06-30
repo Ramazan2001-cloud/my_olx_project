@@ -3,8 +3,7 @@ import cn from "classnames";
 import MoreInfoChartacteristic from "./more_info_characteristic/more_info_characteristic";
 import Link from "next/link";
 
-const MoreInfoAd = ({ ad_info, GetAdId }) => {
-  
+const MoreInfoAd = ({ ad_info }) => {
   const item = 0;
   const characteristicAd = ad_info[item].product_characteristics.map(
     (item, i) => {

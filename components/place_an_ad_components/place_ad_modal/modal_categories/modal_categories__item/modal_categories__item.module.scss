@@ -1,0 +1,15 @@
+.categories__item {
+  max-width: 330.33px;
+  height: 80px;
+  padding: 16px;
+  background-color: rgb(235, 241, 255);
+  border-radius: 5px;
+	margin-bottom: 15px;
+  .categories__image{
+    border-radius: 100%;
+    background-color:rgb(35, 229, 219);
+  }
+  .categories__name {
+    margin: 16px;
+  }
+}

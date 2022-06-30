@@ -1,7 +1,10 @@
 import styles from "./place_ad.module.scss";
+import ModalCategories from "./place_ad_modal/modal_categories/modal_categories";
+import { useState } from "react";
 import cn from "classnames";
 
-const PlaceAdDescrTitle = () => {
+const PlaceAd = ({ category }) => {
+  const [modalActive, setModalActive] = useState(false);
   return (
     <div className={cn(styles.placead__content)}>
       <div className={cn(styles.placead_descr__cat)}>
@@ -20,7 +23,10 @@ const PlaceAdDescrTitle = () => {
         </div>
         <div>
           <span className={cn(styles.descr__cat__span2)}>Категория*</span>
-          <div className={cn(styles.descr__cat__select)}>
+          <div
+            className={cn(styles.descr__cat__select)}
+            onClick={setModalActive}
+          >
             <span className={cn(styles.descr__cat__span)}>
               Выберите категорию
             </span>
@@ -28,7 +34,12 @@ const PlaceAdDescrTitle = () => {
           </div>
         </div>
       </div>
+      <ModalCategories
+        active={modalActive}
+        setActive={setModalActive}
+        categoryDate={category}
+      />
     </div>
   );
 };
-export default PlaceAdDescrTitle;
+export default PlaceAd;

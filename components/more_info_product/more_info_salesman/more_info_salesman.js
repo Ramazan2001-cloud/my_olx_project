@@ -1,7 +1,9 @@
 import styles from "./more_info_salesman.module.scss";
+import name from "../../vip_content/vip_content";
 import cn from "classnames";
 import Link from "next/link";
 const MoreInfoSalesman = () => {
+  console.log(name);
   return (
     <div className={cn(styles.more_salesman)}>
       <h1 className={cn(styles.more_salesman__AdUser)}>Пользователь</h1>
