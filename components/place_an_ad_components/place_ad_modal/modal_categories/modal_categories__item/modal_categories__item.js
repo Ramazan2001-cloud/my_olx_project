@@ -1,9 +1,10 @@
 import styles from "./modal_categories__item.module.scss";
 import cn from "classnames";
 
-const ModalCategoriesItem = ({imageItem, nameItem}) => {
+const ModalCategoriesItem = ({ id, imageItem, nameItem, visibleSubCategory }) => {
+  
   return (
-    <li className={cn(styles.categories__item)}>
+    <li className={cn(styles.categories__item)} onClick={visibleSubCategory}>
       <img
         src={imageItem}
         alt="category logo"

@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
   try {
     // http://localhost:3000/api/hello
     const categoryResponse = await fetch(
-      "http://dev.qoldan.com/api/ads/ad_cat/find_all"
+      "http://qoldan-dev.com/api/ads/ad_cat/find_all"
     );
     const categoryData = await categoryResponse.json();
     //________________________________________________

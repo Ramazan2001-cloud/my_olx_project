@@ -10,26 +10,48 @@ import ModalCategories from "../../components/place_an_ad_components/place_ad_mo
 import cn from "classnames";
 
 export const getStaticProps = async () => {
-  const categoryResponse = await fetch(
-    "http://dev.qoldan.com/api/ads/ad_cat/find_all"
-  );
-  const categoryData = await categoryResponse.json();
-  return {
-    props: {
-      categoryData,
-    },
-  };
+  try {
+    const categoryResponse = await fetch(
+      "http://qoldan-dev.com/api/ads/ad_cat/find_all"
+    );
+    const categoryData = await categoryResponse.json();
+    const subCategoryResponse = await fetch(
+      "http://qoldan-dev.com/api/ads/ad_cat/find_subcat"
+    );
+    
+    const subCategoryData = await subCategoryResponse.json();
+
+    if (!categoryData || !subCategoryData) {
+      return {
+        notFound: true,
+      };
+    }
+    return {
+      props: {
+        categoryData: categoryData,
+        subCategoryData: subCategoryData,
+      },
+    };
+  } catch (e) {
+    return {
+      props: {
+        categoryData: null,
+        subCategoryData: null,
+      },
+    };
+  }
 };
 
-const PlaceAnAd = ({ categoryData }) => {
-  console.log(categoryData);
+const PlaceAnAd = ({ categoryData, subCategoryData }) => {
+  // console.log(subCategoryData[0].subcategory[0].name);
+  // console.log(subCategoryData);
   return (
     <div>
       <main className={cn(styles.main)}>
         <div className={cn(styles.placead__container, globalStyles.container)}>
           <form action="##">
             <h2 className={cn(styles.placead__title)}>Создать объявление</h2>
-            <PlaceAd category={categoryData} />
+            <PlaceAd category={categoryData} subCategory={subCategoryData} />
             <PlaceAdPhoto />
             <PlaceDescription />
             <PlaceAdContacts />

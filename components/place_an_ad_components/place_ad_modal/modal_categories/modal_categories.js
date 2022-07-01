@@ -1,8 +1,10 @@
 import ModalCategoriesItem from "./modal_categories__item/modal_categories__item";
 import styles from "./modal_categories.module.scss";
+import { useState } from "react";
 import cn from "classnames";
-
-const ModalCategories = ({ active, setActive, categoryDate }) => {
+import ModalSubCategories from "../modal_subcategories/modal_subcategories";
+const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
+  const [subCat, setSubCat] = useState(0);
   const image = [
     "https://categories.olxcdn.com/assets/categories/olxkz/uslugi-7-2x.png",
     "https://categories.olxcdn.com/assets/categories/olxkz/nedvizhimost-1-2x.png",
@@ -16,14 +18,28 @@ const ModalCategories = ({ active, setActive, categoryDate }) => {
     "https://categories.olxcdn.com/assets/categories/olxkz/zhivotnye-35-2x.png",
   ];
   const modalcat = categoryDate.map((item, i) => {
+    const visibleSubCat = () => {
+      setSubCat((prev) => {
+        // console.log(prev + item.id);
+        return prev + item.id;
+      });
+    };
     return (
       <ModalCategoriesItem
         key={item.id}
+        id={item.id}
         imageItem={image[i]}
         nameItem={item.name}
+        visibleSubCategory={visibleSubCat}
       />
     );
   });
+  const modalSubCat = categoryDate.map((item, i) => {
+    if (item.id === subCat) {
+      return <ModalSubCategories key={item.id} data={subCatData} />;
+    }
+  });
+
   return (
     <div
       className={
@@ -31,7 +47,10 @@ const ModalCategories = ({ active, setActive, categoryDate }) => {
           ? cn(styles.modalCat__container, styles.active)
           : cn(styles.modalCat__container)
       }
-      onClick={() => setActive(false)}
+      onClick={() => {
+        setActive(false);
+        setSubCat((prev) => prev * 0);
+      }}
     >
       <div
         className={cn(styles.modalCat__content)}
@@ -43,13 +62,18 @@ const ModalCategories = ({ active, setActive, categoryDate }) => {
           width="20px"
           height="20px"
           style={{ float: "right" }}
-          onClick={() => setActive(false)}
+          onClick={() => {
+            setActive(false);
+            setSubCat((prev) => prev * 0);
+          }}
         />
         <h2 className={cn(styles.modalCat__title)}>Выберите категорию</h2>
-        <ul className={cn(styles.modalCat__list)}>{modalcat}</ul>
+        {subCat == 0 ? (
+          <ul className={cn(styles.modalCat__list)}>{modalcat}</ul>
+        ) : null}
+        {modalSubCat}
       </div>
     </div>
-    
   );
 };
 export default ModalCategories;

@@ -3,8 +3,9 @@ import ModalCategories from "./place_ad_modal/modal_categories/modal_categories"
 import { useState } from "react";
 import cn from "classnames";
 
-const PlaceAd = ({ category }) => {
+const PlaceAd = ({ category, subCategory}) => {
   const [modalActive, setModalActive] = useState(false);
+  
   return (
     <div className={cn(styles.placead__content)}>
       <div className={cn(styles.placead_descr__cat)}>
@@ -38,6 +39,7 @@ const PlaceAd = ({ category }) => {
         active={modalActive}
         setActive={setModalActive}
         categoryDate={category}
+        subCatData={subCategory}
       />
     </div>
   );
