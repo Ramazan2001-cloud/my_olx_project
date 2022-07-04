@@ -43,8 +43,6 @@ export const getStaticProps = async () => {
 };
 
 const PlaceAnAd = ({ categoryData, subCategoryData }) => {
-  // console.log(subCategoryData[0].subcategory[0].name);
-  // console.log(subCategoryData);
   return (
     <div>
       <main className={cn(styles.main)}>

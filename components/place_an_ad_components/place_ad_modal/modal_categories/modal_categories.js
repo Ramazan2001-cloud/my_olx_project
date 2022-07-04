@@ -36,10 +36,10 @@ const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
   });
   const modalSubCat = categoryDate.map((item, i) => {
     if (item.id === subCat) {
-      return <ModalSubCategories key={item.id} data={subCatData} />;
+      return <ModalSubCategories key={item.id} data={subCatData} id={subCat} />;
     }
   });
-
+  
   return (
     <div
       className={
