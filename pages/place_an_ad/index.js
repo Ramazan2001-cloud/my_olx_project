@@ -10,17 +10,19 @@ import ModalCategories from "../../components/place_an_ad_components/place_ad_mo
 import cn from "classnames";
 
 export const getStaticProps = async () => {
+
   try {
     const categoryResponse = await fetch(
       "http://qoldan-dev.com/api/ads/ad_cat/find_all"
     );
     const categoryData = await categoryResponse.json();
+    
     const subCategoryResponse = await fetch(
       "http://qoldan-dev.com/api/ads/ad_cat/find_subcat"
     );
     
     const subCategoryData = await subCategoryResponse.json();
-
+    
     if (!categoryData || !subCategoryData) {
       return {
         notFound: true,

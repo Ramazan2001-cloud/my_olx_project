@@ -6,6 +6,7 @@ import cn from "classnames";
 const PlaceAd = ({ category, subCategory}) => {
   const [modalActive, setModalActive] = useState(false);
   
+
   return (
     <div className={cn(styles.placead__content)}>
       <div className={cn(styles.placead_descr__cat)}>

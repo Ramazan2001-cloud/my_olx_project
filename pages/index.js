@@ -12,7 +12,6 @@ import { Html } from "next/document";
 
 export const getStaticProps = async () => {
   try {
-    // http://localhost:3000/api/hello
     const categoryResponse = await fetch(
       "http://qoldan-dev.com/api/ads/ad_cat/find_all"
     );

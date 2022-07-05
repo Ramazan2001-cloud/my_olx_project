@@ -20,7 +20,6 @@ const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
   const modalcat = categoryDate.map((item, i) => {
     const visibleSubCat = () => {
       setSubCat((prev) => {
-        // console.log(prev + item.id);
         return prev + item.id;
       });
     };
