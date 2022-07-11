@@ -5,6 +5,7 @@ import cn from "classnames";
 import ModalSubCategories from "../modal_subcategories/modal_subcategories";
 const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
   const [subCat, setSubCat] = useState(0);
+
   const image = [
     "https://categories.olxcdn.com/assets/categories/olxkz/uslugi-7-2x.png",
     "https://categories.olxcdn.com/assets/categories/olxkz/nedvizhimost-1-2x.png",
@@ -35,10 +36,17 @@ const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
   });
   const modalSubCat = categoryDate.map((item, i) => {
     if (item.id === subCat) {
-      return <ModalSubCategories key={item.id} data={subCatData} id={subCat} />;
+      return (
+        <ModalSubCategories
+          key={item.id}
+          data={subCatData}
+          id={subCat}
+          setActive={setActive}
+        />
+      );
     }
   });
-  
+
   return (
     <div
       className={

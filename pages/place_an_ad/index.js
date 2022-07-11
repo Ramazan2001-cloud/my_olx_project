@@ -5,7 +5,7 @@ import PlaceAdPhoto from "../../components/place_an_ad_components/place_ad__phot
 import PlaceDescription from "../../components/place_an_ad_components/place_ad__description/place_description";
 import PlaceAdContacts from "../../components/place_an_ad_components/place_ad__contacts/place_ad__contacts";
 import PlaceAdPublication from "../../components/place_an_ad_components/place_ad__publication/place_ad__publication";
-import ModalCategories from "../../components/place_an_ad_components/place_ad_modal/modal_categories/modal_categories";
+import AdditionalInformation from "../../components/place_an_ad_components/place_additional_information/additional_information";
 
 import cn from "classnames";
 
@@ -54,6 +54,8 @@ const PlaceAnAd = ({ categoryData, subCategoryData }) => {
             <PlaceAd category={categoryData} subCategory={subCategoryData} />
             <PlaceAdPhoto />
             <PlaceDescription />
+            {/* additional information */}
+            <AdditionalInformation/>
             <PlaceAdContacts />
             <PlaceAdPublication />
           </form>

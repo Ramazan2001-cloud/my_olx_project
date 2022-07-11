@@ -3,11 +3,12 @@ import SubcategoriesItem from "./subcategories__item/subcategories__item";
 import { useState, useEffect } from "react";
 import cn from "classnames";
 
-const ModalSubCategories = ({ data, id }) => {
+const ModalSubCategories = ({ data, id, setActive }) => {
   const [secondCat, setSecondCat] = useState("");
   const [ThirdsubCat, setThirdSubCat] = useState("");
   const [secondCat1, setSecondCat1] = useState(undefined); // id here
   const [levelThirdValue, setLevelThirdValue] = useState("");
+  // const [categoryActive, setCategoryActive] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,11 +22,6 @@ const ModalSubCategories = ({ data, id }) => {
     fetchData().catch(console.error);
   }, []);
 
-  //1  Просто вывести вторую категорию done
-  //2 Переходы между вторыми первыми категориями done
-  //3 Вывод и переходы между вторыми и первыми категориями done
-  //4 Верстка 
-  
   useEffect(() => {
     if (secondCat1) {
       const fetchData = async () => {
@@ -54,14 +50,14 @@ const ModalSubCategories = ({ data, id }) => {
       />
     );
   });
-  
+
   let secondLevelCategory, threeSecondCategory;
   if (secondCat1) {
     GetSubCategories(secondCat1);
   } else {
     GetSubCategories(id);
   }
-  
+
   function GetSubCategories(id) {
     secondLevelCategory = data[id - 1].subcategory.map((item, i) => {
       const visibleSecondCategory = () => {
@@ -77,13 +73,14 @@ const ModalSubCategories = ({ data, id }) => {
           isBoolean = false;
         }
       }
-      
+
       return (
         <SubcategoriesItem
           key={item.id}
           name={item.name}
           visibleThirdLevel={visibleSecondCategory}
           checkThreeCat={isBoolean}
+          setActive={setActive}
         />
       );
     }, 0);
@@ -102,6 +99,7 @@ const ModalSubCategories = ({ data, id }) => {
                   key={item.id}
                   name={item.name}
                   checkThreeCat={noneDusplayArrow}
+                  setActive={setActive}
                 />
               );
             }
@@ -110,7 +108,7 @@ const ModalSubCategories = ({ data, id }) => {
       }
     }
   }
-  
+
   return (
     <div className={cn(styles.categories_levels__content)}>
       <ul className={cn(styles.subcategories__content)}>

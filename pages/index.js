@@ -78,8 +78,7 @@ const Home = ({
   SubCategoriesData,
   VipProductsData,
 }) => {
-  console.log(categoryData);
-
+  
   return (
     <div className={cn("content")}>
       <section>
