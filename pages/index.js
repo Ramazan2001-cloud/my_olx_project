@@ -23,7 +23,7 @@ export const getStaticProps = async () => {
     const LastCategoriesData = await LastCategoriesResponse.json();
     //________________________________________________
     const SubCategoriesResponse = await fetch(
-      "http://localhost:3000/api/subcategories"
+      "http://qoldan-dev.com/api/ads/ad_cat/find_subcat"
     );
     const SubCategoriesData = await SubCategoriesResponse.json();
     //________________________________________________
@@ -78,7 +78,7 @@ const Home = ({
   SubCategoriesData,
   VipProductsData,
 }) => {
-  
+  // console.log(SubCategoriesData);
   return (
     <div className={cn("content")}>
       <section>

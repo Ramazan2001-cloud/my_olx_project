@@ -1,9 +1,9 @@
-import styles from './filterPage.module.css';
+import styles from './filterPage.module.scss';
 
 const FilterPage = () => {
 	return (
-		<div>
-			hello world
+		<div >
+			
 		</div>
 	)
 }

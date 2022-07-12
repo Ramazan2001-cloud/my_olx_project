@@ -3,9 +3,13 @@ import ModalCategories from "./place_ad_modal/modal_categories/modal_categories"
 import { useState } from "react";
 import cn from "classnames";
 import { answer } from "../place_an_ad_components/place_ad_modal/modal_subcategories/subcategories__item/subcategories__item";
+import { nameCat } from "../place_an_ad_components/place_ad_modal/modal_categories/modal_categories";
+import { nameCat2 } from "../place_an_ad_components/place_ad_modal/modal_subcategories/modal_subcategories";
+
+export let nameCat3;
 const PlaceAd = ({ category, subCategory }) => {
   const [modalActive, setModalActive] = useState(false);
-  // console.log(answer);
+  
   return (
     <div className={cn(styles.placead__content)}>
       <div className={cn(styles.placead_descr__cat)}>
@@ -24,9 +28,15 @@ const PlaceAd = ({ category, subCategory }) => {
         </div>
         <div>
           <span className={cn(styles.descr__cat__span2)}>Категория*</span>
-          {answer ? (
+          {(answer && nameCat) || (answer && nameCat2) ? (
             <div className={cn(styles.selectedCat)} onClick={setModalActive}>
-              <span>{answer}</span>
+              <span>
+                {answer} <br />{" "}
+                <span className={cn(styles.selectedCatName)}>
+                  {" "}
+                  {nameCat2 ? (nameCat3 = nameCat2) : (nameCat3 = nameCat)}{" "}
+                </span>
+              </span>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/709/709586.png"
                 alt="arrow"

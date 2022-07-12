@@ -15,7 +15,7 @@ const ServicesCategory = ({ subCat }) => {
     <div className={cn("block")}>
       <div className={cn("arrow_white")}></div>
       <div className={cn("main_subcategory", "container")}>
-        <Link href={"/filterPage"}>
+        <Link href="/filterpage">
           <a className={cn("main_subcategory__title-block")}>
             <img
               src="https://cdn-icons-png.flaticon.com/512/709/709586.png"

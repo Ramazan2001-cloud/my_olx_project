@@ -6,23 +6,21 @@ import PlaceDescription from "../../components/place_an_ad_components/place_ad__
 import PlaceAdContacts from "../../components/place_an_ad_components/place_ad__contacts/place_ad__contacts";
 import PlaceAdPublication from "../../components/place_an_ad_components/place_ad__publication/place_ad__publication";
 import AdditionalInformation from "../../components/place_an_ad_components/place_additional_information/additional_information";
-
 import cn from "classnames";
 
 export const getStaticProps = async () => {
-
   try {
     const categoryResponse = await fetch(
       "http://qoldan-dev.com/api/ads/ad_cat/find_all"
     );
     const categoryData = await categoryResponse.json();
-    
+
     const subCategoryResponse = await fetch(
       "http://qoldan-dev.com/api/ads/ad_cat/find_subcat"
     );
-    
+
     const subCategoryData = await subCategoryResponse.json();
-    
+
     if (!categoryData || !subCategoryData) {
       return {
         notFound: true,
@@ -45,6 +43,7 @@ export const getStaticProps = async () => {
 };
 
 const PlaceAnAd = ({ categoryData, subCategoryData }) => {
+
   return (
     <div>
       <main className={cn(styles.main)}>
@@ -54,8 +53,7 @@ const PlaceAnAd = ({ categoryData, subCategoryData }) => {
             <PlaceAd category={categoryData} subCategory={subCategoryData} />
             <PlaceAdPhoto />
             <PlaceDescription />
-            {/* additional information */}
-            <AdditionalInformation/>
+            <AdditionalInformation />
             <PlaceAdContacts />
             <PlaceAdPublication />
           </form>
