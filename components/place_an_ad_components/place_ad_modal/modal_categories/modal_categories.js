@@ -3,14 +3,12 @@ import styles from "./modal_categories.module.scss";
 import { useState } from "react";
 import cn from "classnames";
 import ModalSubCategories from "../modal_subcategories/modal_subcategories";
-import { nName } from "../../test/test";
 
 export let nameCat;
 export let nameCat2;
 
 const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
   const [subCat, setSubCat] = useState(0);
-  // const [getCategory, setCategory] = useState(undefined);
 
   const image = [
     "https://categories.olxcdn.com/assets/categories/olxkz/uslugi-7-2x.png",
@@ -25,12 +23,11 @@ const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
     "https://categories.olxcdn.com/assets/categories/olxkz/zhivotnye-35-2x.png",
   ];
 
-
   const modalcat = categoryDate.map((item, i) => {
     const visibleSubCat = () => {
       setSubCat((prev) => {
-        nameCat = item.name;
-        nName.name = item.name;
+        nameCat = "";
+        nameCat = nameCat + item.name;
         return prev + item.id;
       });
     };
@@ -52,6 +49,7 @@ const ModalCategories = ({ active, setActive, categoryDate, subCatData }) => {
           data={subCatData}
           id={subCat}
           setActive={setActive}
+          setSubCat={setSubCat}
         />
       );
     }

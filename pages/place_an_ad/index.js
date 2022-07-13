@@ -43,7 +43,6 @@ export const getStaticProps = async () => {
 };
 
 const PlaceAnAd = ({ categoryData, subCategoryData }) => {
-
   return (
     <div>
       <main className={cn(styles.main)}>
@@ -51,9 +50,8 @@ const PlaceAnAd = ({ categoryData, subCategoryData }) => {
           <form action="##">
             <h2 className={cn(styles.placead__title)}>Создать объявление</h2>
             <PlaceAd category={categoryData} subCategory={subCategoryData} />
-            <PlaceAdPhoto />
-            <PlaceDescription />
-            <AdditionalInformation />
+            {/* <PlaceAdPhoto />
+            <PlaceDescription /> */}
             <PlaceAdContacts />
             <PlaceAdPublication />
           </form>

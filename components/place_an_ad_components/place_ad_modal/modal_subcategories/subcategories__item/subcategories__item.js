@@ -9,9 +9,10 @@ const SubcategoriesItem = ({
   visibleThirdLevel,
   checkThreeCat,
   setActive,
+  setSubCat,
 }) => {
   const [nName, setNname] = useState(undefined);
-  
+
   return (
     <>
       {checkThreeCat === false ? (
@@ -19,11 +20,12 @@ const SubcategoriesItem = ({
           className={cn(styles.subcategories_item)}
           onClick={() => {
             setActive(false);
+            setSubCat((prev) => prev * 0);
             setNname((prev) => {
               prev = "";
               answer = prev + name;
               return prev + name;
-            })
+            });
           }}
         >
           <span className={cn(styles.subcategories__name)}>{name}</span>

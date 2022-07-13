@@ -4,13 +4,12 @@ import { useState, useEffect } from "react";
 import cn from "classnames";
 
 export let nameCat2;
-const ModalSubCategories = ({ data, id, setActive }) => {
+const ModalSubCategories = ({ data, id, setActive, setSubCat }) => {
   const [secondCat, setSecondCat] = useState("");
   const [ThirdsubCat, setThirdSubCat] = useState("");
   const [secondCat1, setSecondCat1] = useState(undefined); // id here
   const [levelThirdValue, setLevelThirdValue] = useState("");
-  // const [categoryActive, setCategoryActive] = useState(false);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
@@ -83,6 +82,7 @@ const ModalSubCategories = ({ data, id, setActive }) => {
           visibleThirdLevel={visibleSecondCategory}
           checkThreeCat={isBoolean}
           setActive={setActive}
+          setSubCat={setSubCat}
         />
       );
     }, 0);
@@ -102,6 +102,7 @@ const ModalSubCategories = ({ data, id, setActive }) => {
                   name={item.name}
                   checkThreeCat={noneDusplayArrow}
                   setActive={setActive}
+                  setSubCat={setSubCat}
                 />
               );
             }

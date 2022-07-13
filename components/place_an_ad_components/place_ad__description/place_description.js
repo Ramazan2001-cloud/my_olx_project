@@ -1,9 +1,12 @@
 import styles from "./place_description.module.scss";
 import cn from "classnames";
 import { useState } from "react";
+
+
 const PlaceDescription = () => {
   const [countText, setCountText] = useState(80);
   const [countMax, setCountMax] = useState(0);
+  
   const visibleCountText = () => {
     setCountText((prev) => {
       return prev - 1;
