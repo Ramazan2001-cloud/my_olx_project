@@ -1,5 +1,6 @@
 import styles from "./searchmain.module.css";
 import classNames from "classnames/bind";
+import Link from "next/link";
 let cn = classNames.bind(styles);
 
 const SearchMain = () => {
@@ -44,21 +45,22 @@ const SearchMain = () => {
             className={cn("searchmain-input__region", "backGround_block-color")}
           />
         </div>
-        <button
-          type="submit"
-          className={cn("searchmain__button", "backGround_block-color")}
-        >
-          <span className={cn("srh-button__text")}>Поиск</span>
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/149/149852.png"
-            alt="search"
-            width="25px"
-            height="25px"
-          />
-        </button>
+        <Link href="/filterpage">
+          <button
+            type="submit"
+            className={cn("searchmain__button", "backGround_block-color")}
+          >
+            <span className={cn("srh-button__text")}>Поиск</span>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/149/149852.png"
+              alt="search"
+              width="25px"
+              height="25px"
+            />
+          </button>
+        </Link>
       </form>
     </div>
   );
 };
 export default SearchMain;
-

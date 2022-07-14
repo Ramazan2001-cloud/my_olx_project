@@ -79,6 +79,7 @@ const Home = ({
   VipProductsData,
 }) => {
   // console.log(SubCategoriesData);
+
   return (
     <div className={cn("content")}>
       <section>

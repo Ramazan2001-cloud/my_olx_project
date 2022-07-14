@@ -12,7 +12,7 @@ import AdditionalInformation from "../place_an_ad_components/place_additional_in
 export let nameCat3;
 const PlaceAd = ({ category, subCategory }) => {
   const [modalActive, setModalActive] = useState(false);
-  
+
   let isBoolean = false;
   return (
     <>
@@ -39,7 +39,7 @@ const PlaceAd = ({ category, subCategory }) => {
               ((isBoolean = true),
               (
                 <div className={cn(styles.descr_cat__block)}>
-                  <button
+                  <div
                     className={cn(styles.selectedCat)}
                     onClick={setModalActive}
                   >
@@ -58,12 +58,11 @@ const PlaceAd = ({ category, subCategory }) => {
                       width="30px"
                       height="30px"
                     />
-                  </button>
-                  {/* <a href="javascript:location.reload(true)" className={cn(styles.resetLink)}> Сбросить все </a> */}
+                  </div>
                 </div>
               ))
             ) : (
-              <button
+              <div
                 className={cn(styles.descr__cat__select)}
                 onClick={setModalActive}
               >
@@ -77,7 +76,7 @@ const PlaceAd = ({ category, subCategory }) => {
                   height="30px"
                   className={cn(styles.descr_cat__image)}
                 />
-              </button>
+              </div>
             )}
           </div>
         </div>
