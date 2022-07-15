@@ -11,7 +11,7 @@ const Filer = () => {
           <div className={cn(styles.accordion__block)}>
             <span>Любая категория..</span>
             <img
-              src="https://cdn-icons.flaticon.com/png/512/2985/premium/2985150.png?token=exp=1657802506~hmac=326aeeadfda97d978ad24b0296e98573"
+              src="./arrowdown.png"
               alt="arrow down"
               className={cn(styles.accordion__arrow)}
             />

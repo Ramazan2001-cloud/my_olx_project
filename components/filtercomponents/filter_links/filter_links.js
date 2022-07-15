@@ -2,8 +2,11 @@ import styles from "./filter_links.module.scss";
 import cn from "classnames";
 import Link from "next/link";
 import FilterCategory from "../filtercategory/filtercategory";
+import FilterProductList from "../filterproduct__list/filterproduct__list";
 
-const FilterLinks = ({ linkData }) => {
+const FilterLinks = ({ linkData, productData }) => {
+  
+  
   return (
     <div className={cn(styles.filterLink__container)}>
       <h1 className={cn(styles.filterLink__title)}>
@@ -19,7 +22,7 @@ const FilterLinks = ({ linkData }) => {
           <div className={cn(styles.filtersort__select)}>
             <span>Рекомендованное вам</span>
             <img
-              src="https://cdn-icons.flaticon.com/png/512/2985/premium/2985150.png?token=exp=1657802506~hmac=326aeeadfda97d978ad24b0296e98573"
+              src="./arrowdown.png"
               alt="arrow down"
               width="30px"
               height="30px"
@@ -43,6 +46,8 @@ const FilterLinks = ({ linkData }) => {
         </div>
       </div>
       <FilterCategory linkData={linkData} />
+      
+      <FilterProductList productData={productData}/>
     </div>
   );
 };
