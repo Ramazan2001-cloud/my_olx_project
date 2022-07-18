@@ -63,8 +63,13 @@
   -webkit-appearance: none;
   margin: 0;
 }
-.lines{
-  margin-top:50px;
+.filter__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.lines {
+  margin-top: 50px;
   width: 100%;
   height: 0.99px;
   background-color: #7f9799;

@@ -40,12 +40,11 @@ export const getStaticProps = async () => {
 };
 
 const FilterPage = ({ categoryData, filterProductData }) => {
-  
   return (
     <main className={cn(styles.main__filterpage)}>
       <div className={cn(globalStyles.container)}>
         <SearchFilter />
-        <SelectFilter />
+        <SelectFilter category={categoryData} />
         <FilterLinks linkData={categoryData} productData={filterProductData} />
       </div>
     </main>

@@ -8,7 +8,7 @@ const FilterProductList = ({productData}) => {
 	});
 	return (
 		<ul className={cn(styles.product__list)}>
-			<FilterProductItem/>
+			<FilterProductItem />
 		</ul>
 	);
 };

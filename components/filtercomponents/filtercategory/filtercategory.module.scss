@@ -1,4 +1,8 @@
-.iltercategory__container{
-	margin: 0;
-	padding: 0;
+.filtercategory__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }

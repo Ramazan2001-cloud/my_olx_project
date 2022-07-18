@@ -1,0 +1,32 @@
+.category__item {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  transition: 0.1s;
+  &:hover {
+    background-color: #002f34;
+  }
+  .item__link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: rgb(0, 47, 52);
+    & > .item__count {
+      color: rgb(127, 151, 153);
+    }
+    &:hover {
+      color: #ffffff;
+      & > .item__count:hover {
+        color: #ffffff;
+      }
+    }
+    .item__name {
+      margin: 0;
+      font-family: Geomanist, Arial, sans-serif;
+      margin-right: 5px;
+      font-size: 14px;
+    }
+    .item__count {
+      font-size: 14px;
+    }
+  }
+}

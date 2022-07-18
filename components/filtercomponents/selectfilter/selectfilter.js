@@ -1,7 +1,7 @@
 import styles from "./selectfilter.module.scss";
 import cn from "classnames";
 import Filter from "../filter/filter";
-const SelectFilter = () => {
+const SelectFilter = ({ category }) => {
   return (
     <div className={cn(styles.select__container)}>
       <div className={cn(styles.select__add)}>
@@ -22,7 +22,7 @@ const SelectFilter = () => {
           </span>
         </button>
       </div>
-			<Filter/>
+      <Filter categoryData={category} />
     </div>
   );
 };

@@ -46,7 +46,6 @@ const FilterLinks = ({ linkData, productData }) => {
         </div>
       </div>
       <FilterCategory linkData={linkData} />
-      
       <FilterProductList productData={productData}/>
     </div>
   );
