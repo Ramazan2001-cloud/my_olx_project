@@ -3,7 +3,6 @@ import cn from "classnames";
 import globalStyles from "../../styles/Home.module.css";
 import SearchFilter from "../../components/filtercomponents/searchfilter/searchfilter";
 import SelectFilter from "../../components/filtercomponents/selectfilter/selectfilter";
-import FilterLinks from "../../components/filtercomponents/filter_links/filter_links";
 
 export const getStaticProps = async () => {
   try {
@@ -44,8 +43,11 @@ const FilterPage = ({ categoryData, filterProductData }) => {
     <main className={cn(styles.main__filterpage)}>
       <div className={cn(globalStyles.container)}>
         <SearchFilter />
-        <SelectFilter category={categoryData} />
-        <FilterLinks linkData={categoryData} productData={filterProductData} />
+        <SelectFilter
+          category={categoryData}
+          linkData={categoryData}
+          productData={filterProductData}
+        />
       </div>
     </main>
   );

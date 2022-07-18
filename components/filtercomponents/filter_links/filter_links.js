@@ -3,16 +3,19 @@ import cn from "classnames";
 import Link from "next/link";
 import FilterCategory from "../filtercategory/filtercategory";
 import FilterProductList from "../filterproduct__list/filterproduct__list";
+import FilterSelect from "./filter_select/filter_select";
 
-const FilterLinks = ({ linkData, productData }) => {
-  
-  
+const FilterLinks = ({ linkData, productData, name }) => {
   return (
     <div className={cn(styles.filterLink__container)}>
-      <h1 className={cn(styles.filterLink__title)}>
-        OLX.kz сервис объявлений Казахстана: купля/продажа товаров и
-        недвижимости, оказание услуг, трудоустройство на OLX.kz
-      </h1>
+      {name ? (
+        <FilterSelect/>
+      ) : (
+        <h1 className={cn(styles.filterLink__title)}>
+          OLX.kz сервис объявлений Казахстана: купля/продажа товаров и
+          недвижимости, оказание услуг, трудоустройство на OLX.kz
+        </h1>
+      )}
       <div className={cn(styles.filterLink_middle__content)}>
         <Link href="/">
           <a className={cn(styles.filterbutton__link)}>Главная</a>
@@ -46,7 +49,7 @@ const FilterLinks = ({ linkData, productData }) => {
         </div>
       </div>
       <FilterCategory linkData={linkData} />
-      <FilterProductList productData={productData}/>
+      <FilterProductList productData={productData} />
     </div>
   );
 };

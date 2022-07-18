@@ -1,22 +1,36 @@
 import styles from "./filter.module.scss";
 import { useState } from "react";
+import FilterItem from "./filter__item/filter__item";
+import FilterLinks from "../filter_links/filter_links";
 import cn from "classnames";
 
-const Filter = ({categoryData}) => {
+
+const Filter = ({ categoryData, linkData, productData }) => {
   const [category, setcategory] = useState(false);
+  const [name, setName] = useState("");
   const visibleCategory = () => {
     setcategory((prev) => {
-      if (prev === false) {
-        return prev = true;
-      }
-      else {
-        return prev = false;
-      }
+      return !prev ? (prev = true) : (prev = false);
     });
   };
-  const categories = categoryData.map(item => {
-    
-  })
+  const categories = categoryData.map((item) => {
+    const getNameCategory = () => {
+      setName((prev) => {
+        prev = "";
+        return prev + item.name;
+      });
+    };
+    return (
+      <FilterItem
+        key={item.id}
+        name={item.name}
+        count={144367}
+        visible={visibleCategory}
+        getName={getNameCategory}
+      />
+    );
+  });
+  
   return (
     <div className={cn(styles.filter)}>
       <h4 className={cn(styles.filter_title)}>Фильтры</h4>
@@ -27,7 +41,7 @@ const Filter = ({categoryData}) => {
             className={cn(styles.accordion__block)}
             onClick={visibleCategory}
           >
-            <span>Любая категория..</span>
+            {name ? <span>{name}</span> : <span>Любая категория..</span>}
             <img
               src="./arrowdown.png"
               alt="arrow down"
@@ -35,34 +49,35 @@ const Filter = ({categoryData}) => {
             />
           </div>
         </div>
-        <div className={cn(styles.price)}>
-          <p className={cn(styles.price__text)}>Цена</p>
-          <div className={cn(styles.price__inputs)}>
-            <input
-              type="number"
-              name="price"
-              placeholder="От:"
-              className={cn(styles.price__input)}
-            />
-            <input
-              type="number"
-              name="price"
-              placeholder="До:"
-              className={cn(styles.price__input)}
-            />
+        {name === "Услуги" ? (
+          <div></div>
+        ) : (
+          <div className={cn(styles.price)}>
+            <p className={cn(styles.price__text)}>Цена</p>
+            <div className={cn(styles.price__inputs)}>
+              <input
+                type="number"
+                name="price"
+                placeholder="От:"
+                className={cn(styles.price__input)}
+              />
+              <input
+                type="number"
+                name="price"
+                placeholder="До:"
+                className={cn(styles.price__input)}
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
-      {category && (
-        <ul className={cn(styles.filter__list)}>
-          <li>Hello world</li>
-          <li>Hello world</li>
-          <li>Hello world</li>
-          <li>Hello world</li>
-          <li>Hello world</li>
-        </ul>
+      {category && <ul className={cn(styles.filter__list)}>{categories}</ul>}
+      {name ? (
+        <div></div>
+      ) : (
+        <div className={cn(styles.lines)}></div>
       )}
-      <div className={cn(styles.lines)}></div>
+      <FilterLinks linkData={linkData} productData={productData} name={name}/>
     </div>
   );
 };

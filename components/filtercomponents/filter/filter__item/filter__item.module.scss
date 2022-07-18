@@ -1,0 +1,28 @@
+.filter__item {
+  width: 198px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+	padding-right: 10px;
+	&:hover {
+		background-color: #002F34;
+		color:#FFFFFF;
+	}
+  .item__name {
+    margin: 0;
+    font-size: 14px;
+  }
+  .item__block {
+    display: flex;
+    align-items: center;
+    .item__count {
+      color: rgb(104, 102, 102);
+			font-size: 10px;
+			margin-right: 5px;
+			background-color:rgb(244, 243, 241);
+			padding:2px 5px;
+			border-radius: 50px;
+    }
+  }
+}
