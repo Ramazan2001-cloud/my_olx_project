@@ -1,0 +1,30 @@
+.favorites__title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 620;
+  margin: 50px 0px 40px 0px;
+}
+.favorites__list {
+  display: flex;
+  .favorites__item {
+    margin-right: 35px;
+    padding-bottom: 17px;
+    padding-left: 12px;
+    padding-right: 12px;
+    &__here {
+      border-bottom: 2px solid #002f34;
+    }
+    .favorites__link {
+      font-size: 16px;
+      text-decoration: none;
+      color: #002f34;
+      &__here {
+        font-weight: 500;
+      }
+      &__other:hover {
+        background-color: #002f34;
+        color: #ffffff;
+      }
+    }
+  }
+}

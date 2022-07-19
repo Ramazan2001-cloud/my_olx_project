@@ -1,8 +1,6 @@
-// import styles from './header.module.css';
 import styles from "./header.module.css";
 import classNames from "classnames/bind";
 import Link from "next/link";
-// import Enter from "../enter/enter";
 let cn = classNames.bind(styles);
 
 const Header = () => {
@@ -27,42 +25,46 @@ const Header = () => {
             <p className={cn("header__kz")}>қаз</p>
           </li>
           <li className={cn("header__item")}>
-            <a className={cn("header-msg__link", "link__reset")}>
-              <img
-                src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059975.png?token=exp=1654765224~hmac=95b15f532fc0c21015b3925f3e6e8b38"
-                width="30px"
-                height="30px"
-                alt="meassage logo"
-                className={cn("header-logo__msg")}
-              />
-            </a>
             <Link href="/myaccount/message">
-              <a className={cn("header__text", "link__reset")}>Сообщения</a>
+              <a className={cn("header-msg__link", "link__reset")}>
+                <img
+                  src="/messageIcon.png"
+                  width="35px"
+                  height="35px"
+                  alt="meassage logo"
+                  className={cn("header-logo__msg")}
+                />
+                <span className={cn("header__text")}>Сообщения</span>
+              </a>
             </Link>
           </li>
           <li className={cn("header__item")}>
-            <a href="#" className={cn("header-heart__link", "link__reset")}>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/1177/1177543.png"
-                alt="#"
-                width="30px"
-                height="30px"
-                className={cn("header-heart__image")}
-              />
-            </a>
+            <Link href="/favorites">
+              <a className={cn("header-heart__link", "link__reset")}>
+                <img
+                  src="/heart.png"
+                  alt="heart"
+                  width="30px"
+                  height="30px"
+                  className={cn("header-heart__image")}
+                />
+              </a>
+            </Link>
           </li>
           <li className={cn("header__item")}>
-            <a className={cn("header__myProfile", "link__reset")}>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/7420/7420785.png"
-                alt="#"
-                width="30px"
-                height="30px"
-                className={cn("header-logo__myProfile")}
-              />
-            </a>
             <Link href="/myaccount/ad">
-              <a className={cn("header__text", "link__reset")}>Мой профиль</a>
+              <a className={cn("header__myProfile", "link__reset")}>
+                <img
+                  src="/user.png"
+                  alt="my profile"
+                  width="30px"
+                  height="30px"
+                  className={cn("header-logo__myProfile")}
+                />
+                <span className={cn("header__text", "link__reset")}>
+                  Мой профиль
+                </span>
+              </a>
             </Link>
           </li>
           <li className={cn("header__item")}>
@@ -80,11 +82,6 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      {/* <div className="burger__container">
-			<span className="burger__span"></span>
-			<span className="burger__span"></span>
-			<span className="burger__span"></span>
-		</div> */}
     </header>
   );
 };
