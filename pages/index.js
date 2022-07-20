@@ -3,12 +3,11 @@ import classNames from "classnames/bind";
 let cn = classNames.bind(styles);
 
 import Maincategories from "/components/maincategories/Maincategories";
-import TopBarBaner from "/components/topbarbanner/topbarbaner";
 import SearchMain from "/components/searchmain/searchmain";
 import VipContent from "/components/vip_content/vip_content";
 import Business from "/components/business/business";
 import AboutStore from "/components/aboutStore/aboutStore";
-import { Html } from "next/document";
+import ContentServices from "../components/lastContent/lastContent__services/content_services";
 
 export const getStaticProps = async () => {
   try {
@@ -70,7 +69,6 @@ export const getStaticProps = async () => {
       },
     };
   }
-  // http://dev.qoldan.com/api/ads/
 };
 const Home = ({
   categoryData,
@@ -78,13 +76,9 @@ const Home = ({
   SubCategoriesData,
   VipProductsData,
 }) => {
-  // console.log(SubCategoriesData);
 
   return (
     <div className={cn("content")}>
-      <section>
-        <TopBarBaner />
-      </section>
       <section>
         <SearchMain />
       </section>
@@ -103,6 +97,9 @@ const Home = ({
       </section>
       <section className={cn("about__container")}>
         <AboutStore />
+      </section>
+      <section>
+        <ContentServices/>
       </section>
     </div>
   );

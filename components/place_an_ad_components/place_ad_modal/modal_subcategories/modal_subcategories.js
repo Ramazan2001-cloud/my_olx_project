@@ -74,7 +74,7 @@ const ModalSubCategories = ({ data, id, setActive, setSubCat }) => {
           isBoolean = false;
         }
       }
-
+      
       return (
         <SubcategoriesItem
           key={item.id}

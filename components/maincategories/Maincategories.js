@@ -11,13 +11,16 @@ import ChildrenWorldCategory from "./children-worldCategory/children-worldCatego
 import HobbyRelaxSportCategory from "./hobby-relax-sportCategory/hobby-relax-sportCategory";
 import TransportCategory from "./transportCategory/transportCategory";
 import AnimalsCategory from "./animalsCategory/animalsCategory";
-// import Link from "next/link";
 import { useState } from "react";
 let cn = classNames.bind(styles);
 
 const Maincategories = ({ categories, lastcategories, subcategories }) => {
   const [subCategory, setSubCategory] = useState(false);
+
   delete categories[9];
+  delete categories[10];
+
+
   const categoryImageLogo = [
     "https://categories.olxcdn.com/assets/categories/olxkz/uslugi-7-2x.png",
     "https://categories.olxcdn.com/assets/categories/olxkz/nedvizhimost-1-2x.png",

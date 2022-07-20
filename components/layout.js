@@ -1,16 +1,16 @@
 import Header from "./header/header";
 import LastContent from "./lastContent/lastContent";
-import styles from "../styles/Home.module.css";
-import classNames from "classnames/bind";
-// let cn = classNames.bind(styles);
+import Container from "./container/container";
+import Main from "./main/main";
 
 export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+        <Main>
+          <Container>{children}</Container>
+        </Main>
       <LastContent />
     </>
   );
 }
-

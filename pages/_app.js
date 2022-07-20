@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-// import Header from '/components/header/header';
 import { useEffect } from "react";
 import Layout from "../components/layout";
 

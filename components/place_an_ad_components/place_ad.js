@@ -11,9 +11,11 @@ import AdditionalInformation from "../place_an_ad_components/place_additional_in
 
 export let nameCat3;
 const PlaceAd = ({ category, subCategory }) => {
+  delete category[10];
   const [modalActive, setModalActive] = useState(false);
 
   let isBoolean = false;
+  
   return (
     <>
       <div className={cn(styles.placead__content)}>

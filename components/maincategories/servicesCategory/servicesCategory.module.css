@@ -13,7 +13,6 @@
 .main_subcategory {
   position: relative;
   border: 1px solid rgb(187, 187, 187);
-  z-index: 2;
   background-color: #f2f4f5;
   /* padding-top:10px; */
 }

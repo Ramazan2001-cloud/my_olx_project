@@ -3,8 +3,17 @@ import Container from "../container";
 import homestyles from "../../styles/Home.module.css";
 import Link from "next/link";
 import cn from "classnames";
+import FavoritesPage from "../../components/favoritescomponents/favoritespage/favoritespage";
+
 const Favorites = () => {
-  
+  const image =
+    "https://static.olx.kz/static/olxkz/packed/font/2fca9562851a1aa214ccd012f6f619d249.svg";
+  const title = "Нет избранных объявлений";
+  const description1 =
+    "Добавить в избранное можно со страницы объявления либо со страницы списка объявлений";
+  const description2 =
+    "Теперь избранные объявления всегда доступны на любом компьютере, а также на мобильной версии сайта, после входа в Мои объявления";
+
   return (
     <main>
       <Container>
@@ -50,6 +59,12 @@ const Favorites = () => {
           </li>
         </ul>
       </Container>
+      <FavoritesPage
+        image={image}
+        title={title}
+        description1={description1}
+        description2={description2}
+      />
     </main>
   );
 };

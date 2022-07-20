@@ -1,0 +1,20 @@
+.lastContent__container {
+  padding-top: 70px;
+  background-color: #f2f4f5;
+}
+.lastContent__document__image {
+  margin-bottom: 15px;
+}
+.lastContent__list{
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left:0px;
+  margin-bottom: 0px;
+  padding-bottom:100px;
+  list-style: none;
+}
+.lastContent__span {
+  margin-right: 5px;
+}

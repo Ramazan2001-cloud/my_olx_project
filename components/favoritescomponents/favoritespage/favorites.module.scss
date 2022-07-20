@@ -1,0 +1,33 @@
+.favorites__container {
+  width: 100%;
+  background-color: #f2f4f5;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+  .favorites__content {
+    margin-bottom: 200px;
+    .favorites__image {
+      display: block;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    .favorites__title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: inherit;
+    }
+    .favorites__descr {
+      margin: 0;
+			font-size: 16px;
+			color: #406367;
+      text-align: center;
+      font-family: inherit;
+			line-height: 22px;
+    }
+  }
+}
+

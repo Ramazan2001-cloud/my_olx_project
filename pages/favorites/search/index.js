@@ -3,8 +3,16 @@ import Container from "../../container";
 import homestyles from "../../../styles/Home.module.css";
 import Link from "next/link";
 import cn from "classnames";
+import FavoritesPage from "../../../components/favoritescomponents/favoritespage/favoritespage";
 
 const Search = () => {
+  const image =
+    "https://static.olx.kz/static/olxkz/packed/font/2ffba693dfa8accb512ba48fe4cc53a230.svg";
+  const title = "Нет избранных результатов поиска";
+  const description1 =
+    "Вы можете сохранить результаты поиска снизу на странице списка объявлений, а также сверху в блоке поиска";
+  const description2 =
+    "Избранные результаты поиска сохраняются в вашем профиле, после того, как вы вошли в Мои объявления";
   return (
     <main>
       <Container>
@@ -51,6 +59,12 @@ const Search = () => {
           </li>
         </ul>
       </Container>
+      <FavoritesPage
+        image={image}
+        title={title}
+        description1={description1}
+        description2={description2}
+      />
     </main>
   );
 };
